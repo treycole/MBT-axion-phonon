@@ -1,0 +1,87 @@
+\def\draftversion{false}
+\RequirePackage{ifthen}
+\ifthenelse{\equal{\draftversion}{true}}{
+  \documentclass[galley,aps,pra,10pt,amsmath,amssymb,
+    superscriptaddress,nofootinbib,longbibliography]{revtex4-2}
+}{
+  \documentclass[twocolumn,aps,pra,10pt,amsmath,amssymb,
+    superscriptaddress,nofootinbib,longbibliography]{revtex4-2}
+}
+\usepackage{graphicx}% Include figure files
+\usepackage[usenames,dvipsnames]{color} % colors
+\usepackage{bm} % bold math
+\usepackage{soul} % \st    for strike-out
+\usepackage{mathtools}
+\usepackage{tabularx}
+\usepackage{dcolumn}
+\usepackage{bbold}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,       
+    linkcolor=blue,          
+    citecolor=blue,       
+    filecolor=magenta,      
+    urlcolor=blue          
+}
+
+\def\Red#1{\textcolor{red}{#1}}
+\def\Blue#1{\textcolor{blue}{#1}}
+\def\Green#1{\textcolor{OliveGreen}{#1}}
+\def\Magenta#1{\textcolor{magenta}{#1}}
+
+\def\scr{\scriptsize}
+\ifthenelse{\equal{\draftversion}{true}}{
+  \marginparwidth 2.7in
+  \marginparsep 0.5in
+  \newcounter{comm} 
+  \def\commnext{\stepcounter{comm}}
+  \def\commtext{{\bf\color{blue}[\arabic{comm}]}}
+  \def\commmar{{\bf\color{blue}[\arabic{comm}]}}
+  \def\dvm#1{\commnext\marginpar{\small DV\commmar: #1}\commtext}
+  \def\tcm#1{\commnext\marginpar{\small TC\commmar: #1}\commtext}
+  \def\tnewpage{\newpage\marginpar{\small Temporary newpage}}
+  \newcommand{\seclab}[1]{\label{sec:#1}{\Red{\small\;\;[sec:~#1]}}}
+  \newcommand{\eqlab}[1]{\Red{\hbox{\small\;\;[#1]}}\label{eq:#1}}
+  \newcommand{\figlab}[1]{\Red{\hbox{\small\;\;[fig:~#1]}}\label{fig:#1}}
+}{
+  \def\dvm#1{}
+  \def\tcm#1{}
+  \def\tnewpage{}
+  \newcommand{\eqlab}[1]{\label{eq:#1}}
+  \newcommand{\seclab}[1]{\label{sec:#1}}
+  \newcommand{\figlab}[1]{\label{fig:#1}}
+}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber\\}
+\newcommand{\eq}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\Eq}[1]{Equation~(\ref{eq:#1})}
+\newcommand{\eqs}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Eqs}[2]{Equations~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\eqo}[2]{Eq.~(\ref{eq:#1}) or (\ref{eq:#2})}
+\newcommand{\eqr}[2]{Eqs.~(\ref{eq:#1}-\ref{eq:#2})}
+\newcommand{\Eqr}[2]{Equations~(\ref{eq:#1}-\ref{eq:#2})}
+\newcommand{\fref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\Fref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\frefs}[2]{Figs.~\ref{fig:#1} and \ref{fig:#2}}
+\newcommand{\frefo}[2]{Figs.~\ref{fig:#1} or \ref{fig:#2}}
+\newcommand{\sref}[1]{Sec.~\ref{sec:#1}}
+\newcommand{\srefs}[2]{Secs.~\ref{sec:#1} and \ref{sec:#2}} 
+\newcommand{\Sref}[1]{Section~\ref{sec:#1}}
+\newcommand{\aref}[1]{Appendix~\ref{sec:#1}}
+\newcommand{\ket}[1]{\vert#1\rangle}
+\newcommand{\bra}[1]{\langle#1\vert}
+\newcommand{\ip}[2]{\langle#1\vert#2\rangle}
+\newcommand{\me}[3]{\langle#1\vert#2\vert#3\rangle}
+\newcommand{\ev}[1]{\langle#1\rangle}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\Tr}{\mathrm{Tr}\,}   
+\newcommand{\code}[1]{\textsc{#1}}  
+\renewcommand{\Re}{\mathrm{Re}\,}
+\renewcommand{\Im}{\mathrm{Im}\,}
+
+\newcommand{\parkmu}{ \partial_{k_\mu} }
+\newcommand{\parmu}{ \partial_{\mu} }
