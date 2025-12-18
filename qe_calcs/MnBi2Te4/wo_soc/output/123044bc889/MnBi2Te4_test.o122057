@@ -1,0 +1,307 @@
+
+USER      =  bc889
+HOMEDIR   =  /home/bc889
+JOB_ID    =  122057
+JOB_NAME  =  MnBi2Te4_test
+JOB_SCRIPT=  /opt/sge/spool/n121/job_scripts/122057
+QUEUE     =  dko48m4
+NSLOTS    =  48
+NHOSTS    =  1
+
+SUB_HOST  =  rupc-01
+SUB_DIR   =  /mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc
+
+EXE_HOST  =  n121
+EXE_DIR   =  /scratch/122057bc889
+OUT_DIR   =  /scratch
+TMP_DIR   =  /tmp/122057.1.dko48m4
+
+INFO      =  Files larger than 100MB will be compressed to reduce network load.
+INFO2     =  Please, do not remove this file while the job is running.
+
+
+
+-----------------------------------------------------------------------------------------
+TOTAL_AVAILABLE_MEM_GB:  251
+REQUESTED_H_VMEM:  3.6
+NUM_SLOTS:  48
+TOTAL_REQUESTED_MEM_GB:  172.8
+
+Your job started at Wed Sep 3 04:47:36 PM EDT 2025 on host n121 in /scratch/122057bc889
+Submission directory is /mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc on host rupc-01
+-----------------------------------------------------------------------------------------
++ source /tmp/122057.1.dko48m4/sge_init.sh
+++ export SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc
+++ SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc
+++ export jobdir=122057bc889
+++ jobdir=122057bc889
+++ export WORK=/scratch
+++ WORK=/scratch
+++ export HOST=192.168.201.211
+++ HOST=192.168.201.211
+++ export port=22057
+++ port=22057
+++ export ibrun=
+++ ibrun=
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ cd /scratch/122057bc889
+++ '[' -f /etc/profile.d/modules.sh ']'
+++ source /etc/profile.d/modules.sh
++++ '[' -n /bin/bash ']'
++++ '[' bash = sh ']'
++++ shell=bash
++++ '[' -f /usr/share/Modules/init/bash ']'
++++ . /usr/share/Modules/init/bash
+++++ unset _mlshdbg
+++++ '[' 0 = 1 ']'
+++++ export 'MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD'
+++++ MODULES_RUN_QUARANTINE='LD_LIBRARY_PATH LD_PRELOAD'
+++++ unset _mlre _mlIFS
+++++ '[' -n x ']'
+++++ _mlIFS=' 	
+'
+++++ IFS=' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
++++++ eval 'echo ${LD_LIBRARY_PATH+x}'
+++++++ echo x
+++++ '[' -n x ']'
++++++ eval 'echo ${LD_LIBRARY_PATH}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' '
+++++ _mlrv=MODULES_RUNENV_LD_LIBRARY_PATH
++++++ eval 'echo ${MODULES_RUNENV_LD_LIBRARY_PATH:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
++++++ eval 'echo ${LD_PRELOAD+x}'
+++++++ echo
+++++ '[' -n '' ']'
+++++ _mlrv=MODULES_RUNENV_LD_PRELOAD
++++++ eval 'echo ${MODULES_RUNENV_LD_PRELOAD:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' '
+++++ '[' -n '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' ' ']'
+++++ _mlre='eval __MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' __MODULES_QUARANTINE_SET=1 '
++++++ eval '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\''' 'LD_LIBRARY_PATH='\'''\''' 'LD_PRELOAD='\'''\''' __MODULES_QUARANTINE_SET=1 /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++++ __MODULES_QUAR_LD_LIBRARY_PATH=
+++++++ LD_LIBRARY_PATH=
+++++++ LD_PRELOAD=
+++++++ __MODULES_QUARANTINE_SET=1
+++++++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++ eval '_module_raw() {
+   eval "$(/usr/bin/tclsh '\''/usr/share/Modules/libexec/modulecmd.tcl'\'' bash "$@")";
+   _mlstatus=$?;
+   return $_mlstatus;
+};
+module() {
+   local _mlredir=0;
+   if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then
+      if [ "$MODULES_REDIRECT_OUTPUT" = '\''0'\'' ]; then
+         _mlredir=0;
+      elif [ "$MODULES_REDIRECT_OUTPUT" = '\''1'\'' ]; then
+         _mlredir=1;
+      fi;
+   fi;
+   case " $@ " in
+      *'\'' --no-redirect '\''*) _mlredir=0 ;;
+      *'\'' --redirect '\''*) _mlredir=1 ;;
+   esac;
+   if [ $_mlredir -eq 0 ]; then
+      _module_raw "$@";
+   else
+      _module_raw "$@" 2>&1;
+   fi;
+};
+export -f _module_raw;
+export -f module;
+ml() { module ml "$@"; };
+export -f ml;
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl; export MODULES_CMD;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+MANPATH=/usr/share/man:; export MANPATH;
+unset __MODULES_AUTOINIT_INPROGRESS;
+MODULESHOME=/usr/share/Modules; export MODULESHOME;
+LOADEDMODULES=; export LOADEDMODULES;
+test 0;'
++++++ export -f _module_raw
++++++ export -f module
++++++ export -f ml
++++++ MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
++++++ export MODULES_CMD
++++++ __MODULES_SHARE_MANPATH=:1
++++++ export __MODULES_SHARE_MANPATH
++++++ MANPATH=/usr/share/man:
++++++ export MANPATH
++++++ unset __MODULES_AUTOINIT_INPROGRESS
++++++ MODULESHOME=/usr/share/Modules
++++++ export MODULESHOME
++++++ LOADEDMODULES=
++++++ export LOADEDMODULES
++++++ test 0
+++++ '[' -n x ']'
+++++ IFS=' 	
+'
+++++ unset _mlIFS
+++++ unset _mlre _mlv _mlrv
+++++ '[' -n '' ']'
+++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
+++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export PATH=.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ PATH=.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ module load intel/2024 intel/ompi
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load intel/2024 intel/ompi
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load intel/2024 intel/ompi
++ eval 'CPATH=/opt/intel/24.0/ompi/include; export CPATH;
+LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+INTEL_PATH=/opt/intel/oneapi/2024.0/; export INTEL_PATH;
+MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:; export MANPATH;
+LOADEDMODULES=intel/2024:intel/ompi; export LOADEDMODULES;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi; export _LMFILES_;
+MPIF77=/opt/intel/24.0/ompi/bin/mpif77; export MPIF77;
+MPIRUN=/opt/intel/24.0/ompi/bin/mpirun; export MPIRUN;
+MPICC=/opt/intel/24.0/ompi/bin/mpicc; export MPICC;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024; export __MODULES_LMPREREQ;
+MKLROOT=/opt/intel/oneapi/mkl/2024.0/; export MKLROOT;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+INTEL_VERSION=2024.0; export INTEL_VERSION;
+MPICXX=/opt/intel/24.0/ompi/bin/mpicxx; export MPICXX;
+MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec; export MPIEXEC;
+PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+MPIF90=/opt/intel/24.0/ompi/bin/mpif90; export MPIF90;
+test 0;'
+++ CPATH=/opt/intel/24.0/ompi/include
+++ export CPATH
+++ LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ INTEL_PATH=/opt/intel/oneapi/2024.0/
+++ export INTEL_PATH
+++ MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:
+++ export MANPATH
+++ LOADEDMODULES=intel/2024:intel/ompi
+++ export LOADEDMODULES
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi
+++ export _LMFILES_
+++ MPIF77=/opt/intel/24.0/ompi/bin/mpif77
+++ export MPIF77
+++ MPIRUN=/opt/intel/24.0/ompi/bin/mpirun
+++ export MPIRUN
+++ MPICC=/opt/intel/24.0/ompi/bin/mpicc
+++ export MPICC
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024'
+++ export __MODULES_LMPREREQ
+++ MKLROOT=/opt/intel/oneapi/mkl/2024.0/
+++ export MKLROOT
+++ __MODULES_SHARE_MANPATH=:1
+++ export __MODULES_SHARE_MANPATH
+++ INTEL_VERSION=2024.0
+++ export INTEL_VERSION
+++ MPICXX=/opt/intel/24.0/ompi/bin/mpicxx
+++ export MPICXX
+++ MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec
+++ export MPIEXEC
+++ PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ MPIF90=/opt/intel/24.0/ompi/bin/mpif90
+++ export MPIF90
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/wann/3.1
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/wann/3.1
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/wann/3.1
++ eval 'LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+SCRATCH=.; export SCRATCH;
+SMPD_OPTION_NO_DYNAMIC_HOSTS=1; export SMPD_OPTION_NO_DYNAMIC_HOSTS;
+__MODULES_LMALTNAME=iompi/wann/3.1\&as\|iompi/wann/default\&as\|iompi/wann/latest; export __MODULES_LMALTNAME;
+WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/; export WANNIER90ROOT;
+OMP_NUM_THREADS=1; export OMP_NUM_THREADS;
+PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1; export LOADEDMODULES;
+test 0;'
+++ LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ SCRATCH=.
+++ export SCRATCH
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS
+++ __MODULES_LMALTNAME='iompi/wann/3.1&as|iompi/wann/default&as|iompi/wann/latest'
+++ export __MODULES_LMALTNAME
+++ WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/
+++ export WANNIER90ROOT
+++ OMP_NUM_THREADS=1
+++ export OMP_NUM_THREADS
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/qe/7.2
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/qe/7.2
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/qe/7.2
++ eval 'PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin; export PATH;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024:iompi/qe/7.2\&intel/2024\&intel/ompi; export __MODULES_LMPREREQ;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2; export LOADEDMODULES;
+test 0;'
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/122057.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin
+++ export PATH
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024:iompi/qe/7.2&intel/2024&intel/ompi'
+++ export __MODULES_LMPREREQ
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ tar -xzvf tmp.tar.gz
++ sh memory.sh
+tar (child): tmp.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+sh: memory.sh: No such file or directory
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo 'tmp/MnBi2Te4.save/wfc*.dat.gz'
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n='tmp/MnBi2Te4.save/wfc*.dat.gz'
++ gunzip -c 'tmp/MnBi2Te4.save/wfc*.dat.gz'
+/opt/sge/spool/n121/job_scripts/122057: line 40: tmp/MnBi2Te4.save/wfctmp/MnBi2Te4.save/wfc*.dat.gz.dat: No such file or directory
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo 'tmp/MnBi2Te4.wfc*.gz'
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n='tmp/MnBi2Te4.wfc*.gz'
++ gunzip -c 'tmp/MnBi2Te4.wfc*.gz'
+/opt/sge/spool/n121/job_scripts/122057: line 46: tmp/wfctmp/MnBi2Te4.wfc*.gz: No such file or directory
++ mpirun -n 32 taskset -c 0-31 pw.x -input MnBi2Te4.scf.in
++ mpirun -n 32 taskset -c 0-31 pw.x -input MnBi2Te4.nscf.in
++ mpirun -n 32 taskset -c 0-31 pw.x -input MnBi2Te4.bands.in
+Your job finished at Sun Sep 14 12:47:39 AM EDT 2025

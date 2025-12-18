@@ -1,0 +1,5 @@
+&bands
+   prefix='MnBi2Te4',
+   outdir='./tmp/',
+   filband = 'MnBi2Te4_bands.dat'
+/

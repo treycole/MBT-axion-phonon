@@ -1,0 +1,91 @@
+# CIF file created by ISOCIF, version 3.1.3               
+# Magnetic Space Group: 167.108 R-3c.1'_c[R-3m]
+# Space-group preferences: hexagonal axes
+# Lattice parameters: a= 4.33360, b= 4.33360, c= 81.85200, alpha= 90.00000, beta= 90.00000, gamma= 120.00000
+# Mn1 6a (0,0,0;0,0,mz), mz= 4.70000
+# Bi1 12c (0,0,z;0,0,mz), z= 0.21245
+# Te1 12c (0,0,z;0,0,mz), z= 0.06668
+# Te2 12c (0,0,z;0,0,mz), z= 0.14703
+
+data_isocif-output
+_audit_creation_method ISOCIF
+
+_cell_length_a     4.33360
+_cell_length_b     4.33360
+_cell_length_c     81.85200
+_cell_angle_alpha  90.00000
+_cell_angle_beta   90.00000
+_cell_angle_gamma  120.00000
+_cell_volume       1331.24373
+
+_space_group_magn.number_BNS "167.108"
+_space_group_magn.name_UNI "R-3c.1'_c[R-3m]"
+_space_group_magn.name_BNS "R_I-3c"
+_space_group_magn.number_OG "166.7.1333"
+_space_group_magn.name_OG "R_R-3m'"
+_space_group_magn.point_group_number_Litvin "20.2.72"
+_space_group_magn.point_group_name_UNI "-3m.1'"
+
+loop_
+_space_group_magn_transforms.id
+_space_group_magn_transforms.Pp_abc
+_space_group_magn_transforms.source
+1 a,b,c;0,0,0 "BNS"
+2 -a,-b,1/2c;0,0,0 "OG"
+
+loop_
+_space_group_symop_magn_operation.id
+_space_group_symop_magn_operation.xyz
+1 x,y,z,+1 
+2 -y,x-y,z,+1 
+3 -x+y,-x,z,+1 
+4 y,x,-z+1/2,+1 
+5 -x,-x+y,-z+1/2,+1 
+6 x-y,-y,-z+1/2,+1 
+7 -x,-y,-z,+1 
+8 y,-x+y,-z,+1 
+9 x-y,x,-z,+1 
+10 -y,-x,z+1/2,+1 
+11 x,x-y,z+1/2,+1 
+12 -x+y,y,z+1/2,+1 
+
+loop_
+_space_group_symop_magn_centering.id
+_space_group_symop_magn_centering.xyz
+1 x,y,z,+1 
+2 x,y,z+1/2,-1 
+3 x+1/3,y+2/3,z+2/3,+1 
+4 x+1/3,y+2/3,z+1/6,-1 
+5 x+2/3,y+1/3,z+1/3,+1 
+6 x+2/3,y+1/3,z+5/6,-1 
+
+loop_
+_atom_type_symbol
+Mn    
+Bi    
+Te    
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_Wyckoff_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_fract_symmform
+Mn1 Mn   6 a  0.00000  0.00000  0.00000  1.00000 0,0,0  
+Bi1 Bi  12 c  0.00000  0.00000  0.21245  1.00000 0,0,Dz 
+Te1 Te  12 c  0.00000  0.00000  0.06668  1.00000 0,0,Dz 
+Te2 Te  12 c  0.00000  0.00000  0.14703  1.00000 0,0,Dz 
+
+loop_
+_atom_site_moment.label
+_atom_site_moment.crystalaxis_x
+_atom_site_moment.crystalaxis_y
+_atom_site_moment.crystalaxis_z
+_atom_site_moment.symmform
+Mn1  0.00000  0.00000  4.70000 0,0,Mz 
+
+# end of cif

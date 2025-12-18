@@ -1,0 +1,1017 @@
+
+USER      =  bc889
+HOMEDIR   =  /home/bc889
+JOB_ID    =  121419
+JOB_NAME  =  MnBi2Te4_w90
+JOB_SCRIPT=  /opt/sge/spool/n135/job_scripts/121419
+QUEUE     =  dko48m4
+NSLOTS    =  48
+NHOSTS    =  1
+
+SUB_HOST  =  rupc-01
+SUB_DIR   =  /mnt/wkdk/bc889/MnBi2Te4/vdw/test
+
+EXE_HOST  =  n135
+EXE_DIR   =  /scratch/121419bc889
+OUT_DIR   =  /scratch
+TMP_DIR   =  /tmp/121419.1.dko48m4
+
+INFO      =  Files larger than 100MB will be compressed to reduce network load.
+INFO2     =  Please, do not remove this file while the job is running.
+
+
+
+-----------------------------------------------------------------------------------------
+TOTAL_AVAILABLE_MEM_GB:  251
+REQUESTED_H_VMEM:  3.6
+NUM_SLOTS:  48
+TOTAL_REQUESTED_MEM_GB:  172.8
+
+Your job started at Wed Aug 20 02:35:05 AM EDT 2025 on host n135 in /scratch/121419bc889
+Submission directory is /mnt/wkdk/bc889/MnBi2Te4/vdw/test on host rupc-01
+-----------------------------------------------------------------------------------------
++ source /tmp/121419.1.dko48m4/sge_init.sh
+++ export SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/vdw/test
+++ SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/vdw/test
+++ export jobdir=121419bc889
+++ jobdir=121419bc889
+++ export WORK=/scratch
+++ WORK=/scratch
+++ export HOST=192.168.201.211
+++ HOST=192.168.201.211
+++ export port=21419
+++ port=21419
+++ export ibrun=
+++ ibrun=
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ cd /scratch/121419bc889
+++ '[' -f /etc/profile.d/modules.sh ']'
+++ source /etc/profile.d/modules.sh
++++ '[' -n /bin/bash ']'
++++ '[' bash = sh ']'
++++ shell=bash
++++ '[' -f /usr/share/Modules/init/bash ']'
++++ . /usr/share/Modules/init/bash
+++++ unset _mlshdbg
+++++ '[' 0 = 1 ']'
+++++ export 'MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD'
+++++ MODULES_RUN_QUARANTINE='LD_LIBRARY_PATH LD_PRELOAD'
+++++ unset _mlre _mlIFS
+++++ '[' -n x ']'
+++++ _mlIFS=' 	
+'
+++++ IFS=' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
++++++ eval 'echo ${LD_LIBRARY_PATH+x}'
+++++++ echo x
+++++ '[' -n x ']'
++++++ eval 'echo ${LD_LIBRARY_PATH}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' '
+++++ _mlrv=MODULES_RUNENV_LD_LIBRARY_PATH
++++++ eval 'echo ${MODULES_RUNENV_LD_LIBRARY_PATH:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
++++++ eval 'echo ${LD_PRELOAD+x}'
+++++++ echo
+++++ '[' -n '' ']'
+++++ _mlrv=MODULES_RUNENV_LD_PRELOAD
++++++ eval 'echo ${MODULES_RUNENV_LD_PRELOAD:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' '
+++++ '[' -n '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' ' ']'
+++++ _mlre='eval __MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' __MODULES_QUARANTINE_SET=1 '
++++++ eval '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\''' 'LD_LIBRARY_PATH='\'''\''' 'LD_PRELOAD='\'''\''' __MODULES_QUARANTINE_SET=1 /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++++ __MODULES_QUAR_LD_LIBRARY_PATH=
+++++++ LD_LIBRARY_PATH=
+++++++ LD_PRELOAD=
+++++++ __MODULES_QUARANTINE_SET=1
+++++++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++ eval '_module_raw() {
+   eval "$(/usr/bin/tclsh '\''/usr/share/Modules/libexec/modulecmd.tcl'\'' bash "$@")";
+   _mlstatus=$?;
+   return $_mlstatus;
+};
+module() {
+   local _mlredir=0;
+   if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then
+      if [ "$MODULES_REDIRECT_OUTPUT" = '\''0'\'' ]; then
+         _mlredir=0;
+      elif [ "$MODULES_REDIRECT_OUTPUT" = '\''1'\'' ]; then
+         _mlredir=1;
+      fi;
+   fi;
+   case " $@ " in
+      *'\'' --no-redirect '\''*) _mlredir=0 ;;
+      *'\'' --redirect '\''*) _mlredir=1 ;;
+   esac;
+   if [ $_mlredir -eq 0 ]; then
+      _module_raw "$@";
+   else
+      _module_raw "$@" 2>&1;
+   fi;
+};
+export -f _module_raw;
+export -f module;
+ml() { module ml "$@"; };
+export -f ml;
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl; export MODULES_CMD;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+MANPATH=/usr/share/man:; export MANPATH;
+unset __MODULES_AUTOINIT_INPROGRESS;
+MODULESHOME=/usr/share/Modules; export MODULESHOME;
+LOADEDMODULES=; export LOADEDMODULES;
+test 0;'
++++++ export -f _module_raw
++++++ export -f module
++++++ export -f ml
++++++ MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
++++++ export MODULES_CMD
++++++ __MODULES_SHARE_MANPATH=:1
++++++ export __MODULES_SHARE_MANPATH
++++++ MANPATH=/usr/share/man:
++++++ export MANPATH
++++++ unset __MODULES_AUTOINIT_INPROGRESS
++++++ MODULESHOME=/usr/share/Modules
++++++ export MODULESHOME
++++++ LOADEDMODULES=
++++++ export LOADEDMODULES
++++++ test 0
+++++ '[' -n x ']'
+++++ IFS=' 	
+'
+++++ unset _mlIFS
+++++ unset _mlre _mlv _mlrv
+++++ '[' -n '' ']'
+++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
+++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export PATH=.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ PATH=.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ module load intel/2024 intel/ompi
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load intel/2024 intel/ompi
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load intel/2024 intel/ompi
++ eval 'CPATH=/opt/intel/24.0/ompi/include; export CPATH;
+LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+INTEL_PATH=/opt/intel/oneapi/2024.0/; export INTEL_PATH;
+MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:; export MANPATH;
+LOADEDMODULES=intel/2024:intel/ompi; export LOADEDMODULES;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi; export _LMFILES_;
+MPIF77=/opt/intel/24.0/ompi/bin/mpif77; export MPIF77;
+MPIRUN=/opt/intel/24.0/ompi/bin/mpirun; export MPIRUN;
+MPICC=/opt/intel/24.0/ompi/bin/mpicc; export MPICC;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024; export __MODULES_LMPREREQ;
+MKLROOT=/opt/intel/oneapi/mkl/2024.0/; export MKLROOT;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+INTEL_VERSION=2024.0; export INTEL_VERSION;
+MPICXX=/opt/intel/24.0/ompi/bin/mpicxx; export MPICXX;
+MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec; export MPIEXEC;
+PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+MPIF90=/opt/intel/24.0/ompi/bin/mpif90; export MPIF90;
+test 0;'
+++ CPATH=/opt/intel/24.0/ompi/include
+++ export CPATH
+++ LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ INTEL_PATH=/opt/intel/oneapi/2024.0/
+++ export INTEL_PATH
+++ MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:
+++ export MANPATH
+++ LOADEDMODULES=intel/2024:intel/ompi
+++ export LOADEDMODULES
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi
+++ export _LMFILES_
+++ MPIF77=/opt/intel/24.0/ompi/bin/mpif77
+++ export MPIF77
+++ MPIRUN=/opt/intel/24.0/ompi/bin/mpirun
+++ export MPIRUN
+++ MPICC=/opt/intel/24.0/ompi/bin/mpicc
+++ export MPICC
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024'
+++ export __MODULES_LMPREREQ
+++ MKLROOT=/opt/intel/oneapi/mkl/2024.0/
+++ export MKLROOT
+++ __MODULES_SHARE_MANPATH=:1
+++ export __MODULES_SHARE_MANPATH
+++ INTEL_VERSION=2024.0
+++ export INTEL_VERSION
+++ MPICXX=/opt/intel/24.0/ompi/bin/mpicxx
+++ export MPICXX
+++ MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec
+++ export MPIEXEC
+++ PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ MPIF90=/opt/intel/24.0/ompi/bin/mpif90
+++ export MPIF90
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/wann/3.1
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/wann/3.1
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/wann/3.1
++ eval 'LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+SCRATCH=.; export SCRATCH;
+SMPD_OPTION_NO_DYNAMIC_HOSTS=1; export SMPD_OPTION_NO_DYNAMIC_HOSTS;
+__MODULES_LMALTNAME=iompi/wann/3.1\&as\|iompi/wann/default\&as\|iompi/wann/latest; export __MODULES_LMALTNAME;
+WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/; export WANNIER90ROOT;
+OMP_NUM_THREADS=1; export OMP_NUM_THREADS;
+PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1; export LOADEDMODULES;
+test 0;'
+++ LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ SCRATCH=.
+++ export SCRATCH
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS
+++ __MODULES_LMALTNAME='iompi/wann/3.1&as|iompi/wann/default&as|iompi/wann/latest'
+++ export __MODULES_LMALTNAME
+++ WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/
+++ export WANNIER90ROOT
+++ OMP_NUM_THREADS=1
+++ export OMP_NUM_THREADS
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/qe/7.2
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/qe/7.2
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/qe/7.2
++ eval 'PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin; export PATH;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024:iompi/qe/7.2\&intel/2024\&intel/ompi; export __MODULES_LMPREREQ;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2; export LOADEDMODULES;
+test 0;'
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/121419.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin
+++ export PATH
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024:iompi/qe/7.2&intel/2024&intel/ompi'
+++ export __MODULES_LMPREREQ
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ tar -xzvf tmp.tar.gz
++ sh memory.sh
+sh: memory.sh: No such file or directory
+tmp/
+tmp/MnBi2Te4.hub28
+tmp/MnBi2Te4.hub12
+tmp/wkgk.txt
+tmp/MnBi2Te4.wfc40.gz
+tmp/MnBi2Te4.xml
+tmp/MnBi2Te4.wfc44.gz
+tmp/MnBi2Te4.wfc21.gz
+tmp/MnBi2Te4.hub7
+tmp/MnBi2Te4.hub27
+tmp/MnBi2Te4.wfc32.gz
+tmp/MnBi2Te4.hub21
+tmp/MnBi2Te4.wfc39.gz
+tmp/MnBi2Te4.wfc27.gz
+tmp/MnBi2Te4.hub16
+tmp/MnBi2Te4.wfc36.gz
+tmp/MnBi2Te4.wfc42.gz
+tmp/MnBi2Te4.wfc9.gz
+tmp/MnBi2Te4.hub23
+tmp/MnBi2Te4.hub10
+tmp/MnBi2Te4.hub11
+tmp/MnBi2Te4.wfc4.gz
+tmp/MnBi2Te4.wfc31.gz
+tmp/MnBi2Te4.wfc45.gz
+tmp/MnBi2Te4.hub4
+tmp/MnBi2Te4.hub8
+tmp/MnBi2Te4.wfc23.gz
+tmp/MnBi2Te4.hub32
+tmp/MnBi2Te4.hub14
+tmp/MnBi2Te4.wfc48.gz
+tmp/MnBi2Te4.wfc28.gz
+tmp/MnBi2Te4.hub17
+tmp/MnBi2Te4.wfc24.gz
+tmp/MnBi2Te4.wfc18.gz
+tmp/MnBi2Te4.wfc26.gz
+tmp/wkdkF.txt
+tmp/MnBi2Te4.hub29
+tmp/MnBi2Te4.wfc47.gz
+tmp/MnBi2Te4.wfc29.gz
+tmp/wkdgF.txt
+tmp/MnBi2Te4.wfc25.gz
+tmp/MnBi2Te4.wfc1.gz
+tmp/MnBi2Te4.wfc10.gz
+tmp/MnBi2Te4.wfc12.gz
+tmp/MnBi2Te4.wfc33.gz
+tmp/MnBi2Te4.wfc15.gz
+tmp/MnBi2Te4.wfc38.gz
+tmp/MnBi2Te4.hub9
+tmp/MnBi2Te4.hub22
+tmp/MnBi2Te4.wfc7.gz
+tmp/MnBi2Te4.wfc19.gz
+tmp/MnBi2Te4.hub19
+tmp/MnBi2Te4.hub31
+tmp/MnBi2Te4.wfc14.gz
+tmp/MnBi2Te4.hub15
+tmp/MnBi2Te4.hub2
+tmp/MnBi2Te4.wfc5.gz
+tmp/MnBi2Te4.save/
+tmp/MnBi2Te4.save/wfc4.dat.gz
+tmp/MnBi2Te4.save/wfc34.dat.gz
+tmp/MnBi2Te4.save/wfc50.dat.gz
+tmp/MnBi2Te4.save/wfc43.dat.gz
+tmp/MnBi2Te4.save/Te.rel-pbe-n-kjpaw_psl.1.0.0.UPF
+tmp/MnBi2Te4.save/wfc16.dat.gz
+tmp/MnBi2Te4.save/wfc42.dat.gz
+tmp/MnBi2Te4.save/wfc13.dat.gz
+tmp/MnBi2Te4.save/Mn.rel-pbe-spn-kjpaw_psl.0.3.1.UPF
+tmp/MnBi2Te4.save/wfc3.dat.gz
+tmp/MnBi2Te4.save/wfc47.dat.gz
+tmp/MnBi2Te4.save/wfc61.dat.gz
+tmp/MnBi2Te4.save/wfc52.dat.gz
+tmp/MnBi2Te4.save/wfc1.dat.gz
+tmp/MnBi2Te4.save/wfc21.dat.gz
+tmp/MnBi2Te4.save/wfc59.dat.gz
+tmp/MnBi2Te4.save/wfc37.dat.gz
+tmp/MnBi2Te4.save/wfc23.dat.gz
+tmp/MnBi2Te4.save/wfc53.dat.gz
+tmp/MnBi2Te4.save/wfc63.dat.gz
+tmp/MnBi2Te4.save/wfc7.dat.gz
+tmp/MnBi2Te4.save/wfc31.dat.gz
+tmp/MnBi2Te4.save/wfc11.dat.gz
+tmp/MnBi2Te4.save/wfc17.dat.gz
+tmp/MnBi2Te4.save/wfc18.dat.gz
+tmp/MnBi2Te4.save/wfc46.dat.gz
+tmp/MnBi2Te4.save/occup.txt
+tmp/MnBi2Te4.save/wfc58.dat.gz
+tmp/MnBi2Te4.save/wfc15.dat.gz
+tmp/MnBi2Te4.save/wfc30.dat.gz
+tmp/MnBi2Te4.save/wfc51.dat.gz
+tmp/MnBi2Te4.save/wfc40.dat.gz
+tmp/MnBi2Te4.save/wfc8.dat.gz
+tmp/MnBi2Te4.save/wfc25.dat.gz
+tmp/MnBi2Te4.save/wfc38.dat.gz
+tmp/MnBi2Te4.save/wfc28.dat.gz
+tmp/MnBi2Te4.save/wfc26.dat.gz
+tmp/MnBi2Te4.save/wfc9.dat.gz
+tmp/MnBi2Te4.save/wfc62.dat.gz
+tmp/MnBi2Te4.save/wfc6.dat.gz
+tmp/MnBi2Te4.save/wfc56.dat.gz
+tmp/MnBi2Te4.save/wfc64.dat.gz
+tmp/MnBi2Te4.save/wfc36.dat.gz
+tmp/MnBi2Te4.save/Bi.rel-pbe-dn-kjpaw_psl.1.0.0.UPF
+tmp/MnBi2Te4.save/wfc19.dat.gz
+tmp/MnBi2Te4.save/wfc5.dat.gz
+tmp/MnBi2Te4.save/wfc48.dat.gz
+tmp/MnBi2Te4.save/data-file-schema.xml
+tmp/MnBi2Te4.save/wfc57.dat.gz
+tmp/MnBi2Te4.save/wfc22.dat.gz
+tmp/MnBi2Te4.save/wfc49.dat.gz
+tmp/MnBi2Te4.save/wfc44.dat.gz
+tmp/MnBi2Te4.save/wfc60.dat.gz
+tmp/MnBi2Te4.save/wfc41.dat.gz
+tmp/MnBi2Te4.save/wfc45.dat.gz
+tmp/MnBi2Te4.save/wfc27.dat.gz
+tmp/MnBi2Te4.save/wfc29.dat.gz
+tmp/MnBi2Te4.save/wfc32.dat.gz
+tmp/MnBi2Te4.save/paw.txt
+tmp/MnBi2Te4.save/wfc24.dat.gz
+tmp/MnBi2Te4.save/wfc10.dat.gz
+tmp/MnBi2Te4.save/wfc12.dat.gz
+tmp/MnBi2Te4.save/wfc14.dat.gz
+tmp/MnBi2Te4.save/wfc55.dat.gz
+tmp/MnBi2Te4.save/charge-density.dat
+tmp/MnBi2Te4.save/wfc54.dat.gz
+tmp/MnBi2Te4.save/wfc39.dat.gz
+tmp/MnBi2Te4.save/wfc2.dat.gz
+tmp/MnBi2Te4.save/wfc35.dat.gz
+tmp/MnBi2Te4.save/wfc20.dat.gz
+tmp/MnBi2Te4.save/wfc33.dat.gz
+tmp/MnBi2Te4.hub5
+tmp/MnBi2Te4.wfc43.gz
+tmp/MnBi2Te4.hub6
+tmp/MnBi2Te4.hub13
+tmp/wkgkF.txt
+tmp/MnBi2Te4.wfc41.gz
+tmp/MnBi2Te4.wfc34.gz
+tmp/MnBi2Te4.hub24
+tmp/MnBi2Te4.wfc8.gz
+tmp/wkdk.txt
+tmp/MnBi2Te4.hub18
+tmp/MnBi2Te4.hub30
+tmp/MnBi2Te4.hub20
+tmp/MnBi2Te4.wfc2.gz
+tmp/MnBi2Te4.wfc6.gz
+tmp/MnBi2Te4.hub1
+tmp/MnBi2Te4.wfc20.gz
+tmp/MnBi2Te4.wfc22.gz
+tmp/MnBi2Te4.wfc35.gz
+tmp/MnBi2Te4.wfc17.gz
+tmp/MnBi2Te4.wfc37.gz
+tmp/MnBi2Te4.wfc11.gz
+tmp/MnBi2Te4.hub26
+tmp/MnBi2Te4.wfc46.gz
+tmp/MnBi2Te4.wfc16.gz
+tmp/MnBi2Te4.wfc13.gz
+tmp/MnBi2Te4.hub3
+tmp/MnBi2Te4.hub25
+tmp/MnBi2Te4.wfc30.gz
+tmp/MnBi2Te4.wfc3.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc10.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=10
++ gunzip -c tmp/MnBi2Te4.save/wfc10.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc11.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=11
++ gunzip -c tmp/MnBi2Te4.save/wfc11.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc12.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=12
++ gunzip -c tmp/MnBi2Te4.save/wfc12.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc13.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=13
++ gunzip -c tmp/MnBi2Te4.save/wfc13.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc14.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=14
++ gunzip -c tmp/MnBi2Te4.save/wfc14.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc15.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=15
++ gunzip -c tmp/MnBi2Te4.save/wfc15.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc16.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=16
++ gunzip -c tmp/MnBi2Te4.save/wfc16.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc17.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=17
++ gunzip -c tmp/MnBi2Te4.save/wfc17.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc18.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=18
++ gunzip -c tmp/MnBi2Te4.save/wfc18.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc19.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=19
++ gunzip -c tmp/MnBi2Te4.save/wfc19.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc1.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=1
++ gunzip -c tmp/MnBi2Te4.save/wfc1.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc20.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=20
++ gunzip -c tmp/MnBi2Te4.save/wfc20.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc21.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=21
++ gunzip -c tmp/MnBi2Te4.save/wfc21.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc22.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=22
++ gunzip -c tmp/MnBi2Te4.save/wfc22.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc23.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=23
++ gunzip -c tmp/MnBi2Te4.save/wfc23.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc24.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=24
++ gunzip -c tmp/MnBi2Te4.save/wfc24.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc25.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=25
++ gunzip -c tmp/MnBi2Te4.save/wfc25.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc26.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=26
++ gunzip -c tmp/MnBi2Te4.save/wfc26.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc27.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=27
++ gunzip -c tmp/MnBi2Te4.save/wfc27.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc28.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=28
++ gunzip -c tmp/MnBi2Te4.save/wfc28.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc29.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=29
++ gunzip -c tmp/MnBi2Te4.save/wfc29.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc2.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=2
++ gunzip -c tmp/MnBi2Te4.save/wfc2.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc30.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=30
++ gunzip -c tmp/MnBi2Te4.save/wfc30.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc31.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=31
++ gunzip -c tmp/MnBi2Te4.save/wfc31.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc32.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=32
++ gunzip -c tmp/MnBi2Te4.save/wfc32.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc33.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=33
++ gunzip -c tmp/MnBi2Te4.save/wfc33.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc34.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=34
++ gunzip -c tmp/MnBi2Te4.save/wfc34.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc35.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=35
++ gunzip -c tmp/MnBi2Te4.save/wfc35.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc36.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=36
++ gunzip -c tmp/MnBi2Te4.save/wfc36.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc37.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=37
++ gunzip -c tmp/MnBi2Te4.save/wfc37.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc38.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=38
++ gunzip -c tmp/MnBi2Te4.save/wfc38.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc39.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=39
++ gunzip -c tmp/MnBi2Te4.save/wfc39.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc3.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=3
++ gunzip -c tmp/MnBi2Te4.save/wfc3.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc40.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=40
++ gunzip -c tmp/MnBi2Te4.save/wfc40.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc41.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=41
++ gunzip -c tmp/MnBi2Te4.save/wfc41.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc42.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=42
++ gunzip -c tmp/MnBi2Te4.save/wfc42.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc43.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=43
++ gunzip -c tmp/MnBi2Te4.save/wfc43.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc44.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=44
++ gunzip -c tmp/MnBi2Te4.save/wfc44.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc45.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=45
++ gunzip -c tmp/MnBi2Te4.save/wfc45.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc46.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=46
++ gunzip -c tmp/MnBi2Te4.save/wfc46.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc47.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=47
++ gunzip -c tmp/MnBi2Te4.save/wfc47.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc48.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=48
++ gunzip -c tmp/MnBi2Te4.save/wfc48.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc49.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=49
++ gunzip -c tmp/MnBi2Te4.save/wfc49.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc4.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=4
++ gunzip -c tmp/MnBi2Te4.save/wfc4.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc50.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=50
++ gunzip -c tmp/MnBi2Te4.save/wfc50.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc51.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=51
++ gunzip -c tmp/MnBi2Te4.save/wfc51.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc52.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=52
++ gunzip -c tmp/MnBi2Te4.save/wfc52.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc53.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=53
++ gunzip -c tmp/MnBi2Te4.save/wfc53.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc54.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=54
++ gunzip -c tmp/MnBi2Te4.save/wfc54.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc55.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=55
++ gunzip -c tmp/MnBi2Te4.save/wfc55.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc56.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=56
++ gunzip -c tmp/MnBi2Te4.save/wfc56.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc57.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=57
++ gunzip -c tmp/MnBi2Te4.save/wfc57.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc58.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=58
++ gunzip -c tmp/MnBi2Te4.save/wfc58.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc59.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=59
++ gunzip -c tmp/MnBi2Te4.save/wfc59.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc5.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=5
++ gunzip -c tmp/MnBi2Te4.save/wfc5.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc60.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=60
++ gunzip -c tmp/MnBi2Te4.save/wfc60.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc61.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=61
++ gunzip -c tmp/MnBi2Te4.save/wfc61.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc62.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=62
++ gunzip -c tmp/MnBi2Te4.save/wfc62.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc63.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=63
++ gunzip -c tmp/MnBi2Te4.save/wfc63.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc64.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=64
++ gunzip -c tmp/MnBi2Te4.save/wfc64.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc6.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=6
++ gunzip -c tmp/MnBi2Te4.save/wfc6.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc7.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=7
++ gunzip -c tmp/MnBi2Te4.save/wfc7.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc8.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=8
++ gunzip -c tmp/MnBi2Te4.save/wfc8.dat.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo tmp/MnBi2Te4.save/wfc9.dat.gz
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n=9
++ gunzip -c tmp/MnBi2Te4.save/wfc9.dat.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc10.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=10
++ gunzip -c tmp/MnBi2Te4.wfc10.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc11.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=11
++ gunzip -c tmp/MnBi2Te4.wfc11.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc12.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=12
++ gunzip -c tmp/MnBi2Te4.wfc12.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc13.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=13
++ gunzip -c tmp/MnBi2Te4.wfc13.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc14.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=14
++ gunzip -c tmp/MnBi2Te4.wfc14.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc15.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=15
++ gunzip -c tmp/MnBi2Te4.wfc15.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc16.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=16
++ gunzip -c tmp/MnBi2Te4.wfc16.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc17.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=17
++ gunzip -c tmp/MnBi2Te4.wfc17.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc18.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=18
++ gunzip -c tmp/MnBi2Te4.wfc18.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc19.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=19
++ gunzip -c tmp/MnBi2Te4.wfc19.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc1.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=1
++ gunzip -c tmp/MnBi2Te4.wfc1.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc20.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=20
++ gunzip -c tmp/MnBi2Te4.wfc20.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc21.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=21
++ gunzip -c tmp/MnBi2Te4.wfc21.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc22.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=22
++ gunzip -c tmp/MnBi2Te4.wfc22.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc23.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=23
++ gunzip -c tmp/MnBi2Te4.wfc23.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc24.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=24
++ gunzip -c tmp/MnBi2Te4.wfc24.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc25.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=25
++ gunzip -c tmp/MnBi2Te4.wfc25.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc26.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=26
++ gunzip -c tmp/MnBi2Te4.wfc26.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc27.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=27
++ gunzip -c tmp/MnBi2Te4.wfc27.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc28.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=28
++ gunzip -c tmp/MnBi2Te4.wfc28.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc29.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=29
++ gunzip -c tmp/MnBi2Te4.wfc29.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc2.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=2
++ gunzip -c tmp/MnBi2Te4.wfc2.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc30.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=30
++ gunzip -c tmp/MnBi2Te4.wfc30.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc31.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=31
++ gunzip -c tmp/MnBi2Te4.wfc31.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc32.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=32
++ gunzip -c tmp/MnBi2Te4.wfc32.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc33.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=33
++ gunzip -c tmp/MnBi2Te4.wfc33.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc34.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=34
++ gunzip -c tmp/MnBi2Te4.wfc34.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc35.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=35
++ gunzip -c tmp/MnBi2Te4.wfc35.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc36.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=36
++ gunzip -c tmp/MnBi2Te4.wfc36.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc37.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=37
++ gunzip -c tmp/MnBi2Te4.wfc37.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc38.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=38
++ gunzip -c tmp/MnBi2Te4.wfc38.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc39.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=39
++ gunzip -c tmp/MnBi2Te4.wfc39.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc3.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=3
++ gunzip -c tmp/MnBi2Te4.wfc3.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc40.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=40
++ gunzip -c tmp/MnBi2Te4.wfc40.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc41.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=41
++ gunzip -c tmp/MnBi2Te4.wfc41.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc42.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=42
++ gunzip -c tmp/MnBi2Te4.wfc42.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc43.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=43
++ gunzip -c tmp/MnBi2Te4.wfc43.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc44.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=44
++ gunzip -c tmp/MnBi2Te4.wfc44.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc45.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=45
++ gunzip -c tmp/MnBi2Te4.wfc45.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc46.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=46
++ gunzip -c tmp/MnBi2Te4.wfc46.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc47.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=47
++ gunzip -c tmp/MnBi2Te4.wfc47.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc48.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=48
++ gunzip -c tmp/MnBi2Te4.wfc48.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc4.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=4
++ gunzip -c tmp/MnBi2Te4.wfc4.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc5.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=5
++ gunzip -c tmp/MnBi2Te4.wfc5.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc6.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=6
++ gunzip -c tmp/MnBi2Te4.wfc6.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc7.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=7
++ gunzip -c tmp/MnBi2Te4.wfc7.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc8.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=8
++ gunzip -c tmp/MnBi2Te4.wfc8.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc9.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=9
++ gunzip -c tmp/MnBi2Te4.wfc9.gz
++ mpirun -np 48 wannier90.x -pp MnBi2Te4
++ mpirun -np 48 pw2wannier90.x -pd true -input MnBi2Te4_pw2wan.in
++ mpirun -np 48 wannier90.x MnBi2Te4
++ ps axu
++ grep memory.sh
++ awk '{print $2}'
++ xargs kill -9
+kill: sending signal to 157847 failed: No such process
++ rm -r 'UNK00*'
+rm: cannot remove 'UNK00*': No such file or directory
+Your job finished at Wed Aug 20 07:21:12 AM EDT 2025

@@ -1,0 +1,11 @@
+&inputpp
+    outdir='./tmp/'
+    prefix='MnBi2Te4',
+    seedname = 'MnBi2Te4_up'
+    spin_component = 'down'
+    write_amn = .true.
+    write_mmn = .true.
+    write_unk = .false.
+   !write_uhu = .true.
+   !write_uIu = .true.
+/
