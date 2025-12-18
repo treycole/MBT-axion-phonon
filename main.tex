@@ -58,28 +58,34 @@ These effects will be activated insofar as some parameters in the crystal Hamilt
 first derivatives.
 
 Another motivation connects with recent explorations of the possibility that the axion field, usually treated as a static background field depending on the ground-state crystal Hamiltonian, 
-might be promoted to a dynamical field in some contexts [14–17]. It is unlikely that the axion field would have its own independent dynamics and quasiparticles; instead, $\theta_{\text{CS}}$ 
+might be promoted to a dynamical field in some contexts \cite{wider2020, wang2016, ooguri2012instability, li_dynamical_2010}. It is unlikely that the axion field would have its own independent dynamics and quasiparticles; instead, $\theta_{\text{CS}}$ 
 likely varies with preexisting (e.g., phonon or charge-density-wave) degrees of freedom of the solid. Still, such situations could be quite interesting, especially in topological materials where $\theta_{\text{CS}}$ is comparable to or equal to $\pi$.
-
 
 There is reason to think that the computation of \emph{derivatives} of $\theta_{\text{CS}}$ may actually be more straightforward than the computation of $\theta_{\text{CS}}$ itself. After all, $\theta_{\text{CS}}$ is a 3D analog of the 1D electric polarization $\mathbf{P}$, and historically first derivatives 
 of $\mathbf{P}$, such as dynamical charges and dielectric constants, were computed well before the modern theory of polarization. This can be understood because 
 $\mathbf{P}$ itself is only well-defined modulo a quantum and is expressed as an integral of a gauge-dependent Berry connection, whereas its derivative 
 $\partial_\lambda \mathbf{P}$ does not suffer from either problem.
 
-Similarly, $\partial_\lambda \theta_{\text{CS}}$ can be expressed as a 3D $k$-space integral of the gauge-invariant 4-curvature:
+Similarly, $\partial_\lambda \theta_{\text{CS}}$ can be expressed as a 3D $k$-space integral of a gauge-invariant four-curvature,
 \begin{equation}
-F^{(4)} = \frac{1}{16\pi} \epsilon^{ijkl} \text{Tr}(\Omega_{ij} \Omega_{kl}),
+\partial_\lambda \theta
+= \frac{1}{16\pi}
+\int_{\text{BZ}} d^3 k \,
+\epsilon^{ijkl} \mathrm{Tr}\!\left(
+\Omega_{ij} \Omega_{kl}
+\right),
 \end{equation}
-in $(k_x, k_y, k_z, \lambda)$-space, where $\Omega_{ij}$ and $\Omega_{kl}$ are 2D non-Abelian Berry curvatures such as $\Omega_{k_x k_y}$ or $\Omega_{k_x \lambda}$.
+defined in the extended parameter space $(k_x,k_y,k_z,\lambda)$, where $\Omega_{ij}$ denotes the non-Abelian Berry curvature associated with coordinates $i,j \in \{k_x,k_y,k_z,\lambda\}$.
+Unlike the Chern-Simons 3-form in Eq.~\ref{eq:CS3form}, this expression is manifestly gauge invariant and does not require the construction of a globally smooth Bloch-state gauge.
 
-The goal of this project is to develop and code practical methods for computing the linear response of $\theta_{\text{CS}}$ to perturbations such as lattice displacements, 
-external fields, strain, etc. The implementation will be tested by comparison to finite-difference calculations of the full $\theta_{\text{CS}}$. The main focus will be on 
-performing this in the first-principles context using density-functional perturbation theory. The $\lambda$-perturbation will be included using methods from [18].
+The goal of this project is to develop and code practical methods for computing the linear response of $\theta_{\text{CS}}$ to axion-active phonons that modulate the axion angle away from its symmetry-enforced quantized values. The main focus will be on performing this in the first-principles context using density-functional theory. The $\lambda$-perturbation will be included using methods from \cite{lihm2021}.
 
 \section{Axion-active phonons}
 
-To modulate the axion angle, we must seek phonon modes that break the underlying $\theta$-quantizing symmetries. 
+% rough sketch of approach
+To modulate the axion angle, we must seek phonon modes that break the underlying $\theta$-quantizing symmetries. Using the SMODES software, we look at the irreducible representations at the $Z$-point, and identify four different symmetry-modes of the $T2-$ little group. These break the underlying $\Theta$ symmetry that protects $\theta$ and couples to the axion angle.
+
+We use QuantumESPRESSO to compute the ab initio electronic structure in the unperturbed system, and choose four different displacement amplitudes for each of the four symmetry modes. We then displace the atoms by hand, and compute the ab initio band structure for each displacement amplitude and symmetry mode. After each, we use Wannier90 to compute the Wannierized tight-binding model in PythTB. From these models, we compute the four curvature and the first-order response of the axion angle.
 
 \bibliography{ref}
 
