@@ -1,0 +1,64 @@
+&control
+  calculation = 'nscf',
+  prefix      = 'MnBi2Te4',
+  outdir      = './tmp/',
+  verbosity   = 'high',
+  pseudo_dir  = './',
+  restart_mode = 'restart',
+  wf_collect   = .true.
+/
+&system
+  ibrav    = 0,              ! explicit CELL_PARAMETERS
+  nat      = 14,             ! Te-Bi-Te-Mn-Te-Bi-Te
+  ntyp     = 4,              ! Mn1, Mn2, Bi, Te
+  nbnd     = 200
+  ecutwfc  = 60.0,           ! plane-wave cutoff (Ry)—tune as needed
+  ecutrho  =  240.0,
+  nosym    = .true.          ! must be true for Wannierization
+  noinv    = .true.
+  nspin    = 2,              ! spin-polarized
+  starting_magnetization(1) = 0.333,  ! Mn
+  starting_magnetization(2) = -0.333,  ! Mn
+  occupations = 'smearing'
+  smearing    = 'cold'
+  degauss     = 0.02
+  vdw_corr    = 'dft-d3'
+  !noncolin   =  .true.
+  !lspinorb   =  .true.
+/
+&electrons
+  conv_thr = 1.0d-7
+  electron_maxstep = 100
+  mixing_beta = 0.4
+  startingpot = 'file'
+/
+
+ATOMIC_SPECIES
+ Mn1  54.9380  Mn.pbe-spn-kjpaw_psl.0.3.1.UPF
+ Mn2  54.9380  Mn.pbe-spn-kjpaw_psl.0.3.1.UPF
+ Bi 208.9800   Bi.pbe-dn-kjpaw_psl.1.0.0.UPF
+ Te 127.6030   Te.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+4.3200267252       0.0000000000      27.0557586366
+2.1464187785       3.7490688622      27.0557586366
+0.0000000000       0.0000000000      27.3984800000
+
+ATOMIC_POSITIONS crystal
+Mn1          0.0000000000       0.0000000000       0.0000000000
+Mn2          0.5000000000       0.5000000000       0.5000000000
+Bi           0.2124500000       0.2124500000       0.2124500000
+Bi           0.7124500000       0.7124500000       0.7124500000
+Bi           0.2875500000       0.2875500000       0.2875500000
+Bi           0.7875500000       0.7875500000       0.7875500000
+Te           0.0666800000       0.0666800000       0.0666800000
+Te           0.5666800000       0.5666800000       0.5666800000
+Te           0.4333200000       0.4333200000       0.4333200000
+Te           0.9333200000       0.9333200000       0.9333200000
+Te           0.1470300000       0.1470300000       0.1470300000
+Te           0.6470300000       0.6470300000       0.6470300000
+Te           0.3529700000       0.3529700000       0.3529700000
+Te           0.8529700000       0.8529700000       0.8529700000
+
+K_POINTS automatic
+  8 8 8  0 0 0

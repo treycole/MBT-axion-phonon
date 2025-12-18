@@ -1,0 +1,6 @@
+&PROJWFC
+prefix = 'MnBi2Te4'
+outdir = './tmp/'
+degauss = 0.001
+DeltaE = 0.001
+/

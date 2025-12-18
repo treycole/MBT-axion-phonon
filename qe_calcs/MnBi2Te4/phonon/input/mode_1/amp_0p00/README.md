@@ -1,0 +1,1 @@
+amplitude is 0.00

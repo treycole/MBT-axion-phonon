@@ -1,0 +1,11 @@
+MnBi2Te4 (R-3m, hex axes): non-magnetic primitive cell
+166
+4.33360 4.33360 40.926 90 90 120
+4
+Mn a 0 0 0
+Bi c 0 0 0.4249
+Te1 c 0 0 0.1334
+Te2 c 0 0 0.2941
+2
+GM
+T

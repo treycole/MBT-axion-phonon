@@ -1,0 +1,969 @@
+
+USER      =  bc889
+HOMEDIR   =  /home/bc889
+JOB_ID    =  123044
+JOB_NAME  =  MnBi2Te4_bands
+JOB_SCRIPT=  /opt/sge/spool/n118/job_scripts/123044
+QUEUE     =  dko48m4
+NSLOTS    =  48
+NHOSTS    =  1
+
+SUB_HOST  =  rupc-01
+SUB_DIR   =  /mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc/122057bc889
+
+EXE_HOST  =  n118
+EXE_DIR   =  /scratch/123044bc889
+OUT_DIR   =  /scratch
+TMP_DIR   =  /tmp/123044.1.dko48m4
+
+INFO      =  Files larger than 100MB will be compressed to reduce network load.
+INFO2     =  Please, do not remove this file while the job is running.
+
+
+
+-----------------------------------------------------------------------------------------
+TOTAL_AVAILABLE_MEM_GB:  251
+REQUESTED_H_VMEM:  3.6
+NUM_SLOTS:  48
+TOTAL_REQUESTED_MEM_GB:  172.8
+
+Your job started at Tue Sep 16 06:08:09 PM EDT 2025 on host n118 in /scratch/123044bc889
+Submission directory is /mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc/122057bc889 on host rupc-01
+-----------------------------------------------------------------------------------------
++ source /tmp/123044.1.dko48m4/sge_init.sh
+++ export SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc/122057bc889
+++ SGE_O_WORKDIR=/mnt/wkdk/bc889/MnBi2Te4/wan90/wosoc/122057bc889
+++ export jobdir=123044bc889
+++ jobdir=123044bc889
+++ export WORK=/scratch
+++ WORK=/scratch
+++ export HOST=192.168.201.211
+++ HOST=192.168.201.211
+++ export port=23044
+++ port=23044
+++ export ibrun=
+++ ibrun=
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ cd /scratch/123044bc889
+++ '[' -f /etc/profile.d/modules.sh ']'
+++ source /etc/profile.d/modules.sh
++++ '[' -n /bin/bash ']'
++++ '[' bash = sh ']'
++++ shell=bash
++++ '[' -f /usr/share/Modules/init/bash ']'
++++ . /usr/share/Modules/init/bash
+++++ unset _mlshdbg
+++++ '[' 0 = 1 ']'
+++++ export 'MODULES_RUN_QUARANTINE=LD_LIBRARY_PATH LD_PRELOAD'
+++++ MODULES_RUN_QUARANTINE='LD_LIBRARY_PATH LD_PRELOAD'
+++++ unset _mlre _mlIFS
+++++ '[' -n x ']'
+++++ _mlIFS=' 	
+'
+++++ IFS=' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
+++++ '[' LD_LIBRARY_PATH = LD_LIBRARY_PATH ']'
++++++ eval 'echo ${LD_LIBRARY_PATH+x}'
+++++++ echo x
+++++ '[' -n x ']'
++++++ eval 'echo ${LD_LIBRARY_PATH}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' '
+++++ _mlrv=MODULES_RUNENV_LD_LIBRARY_PATH
++++++ eval 'echo ${MODULES_RUNENV_LD_LIBRARY_PATH:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' '
+++++ for _mlv in ${MODULES_RUN_QUARANTINE:-}
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
+++++ '[' LD_PRELOAD = LD_PRELOAD ']'
++++++ eval 'echo ${LD_PRELOAD+x}'
+++++++ echo
+++++ '[' -n '' ']'
+++++ _mlrv=MODULES_RUNENV_LD_PRELOAD
++++++ eval 'echo ${MODULES_RUNENV_LD_PRELOAD:-}'
+++++++ echo
+++++ _mlre='__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' '
+++++ '[' -n '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' ' ']'
+++++ _mlre='eval __MODULES_QUAR_LD_LIBRARY_PATH='\'''\'' LD_LIBRARY_PATH='\'''\'' LD_PRELOAD='\'''\'' __MODULES_QUARANTINE_SET=1 '
++++++ eval '__MODULES_QUAR_LD_LIBRARY_PATH='\'''\''' 'LD_LIBRARY_PATH='\'''\''' 'LD_PRELOAD='\'''\''' __MODULES_QUARANTINE_SET=1 /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++++ __MODULES_QUAR_LD_LIBRARY_PATH=
+++++++ LD_LIBRARY_PATH=
+++++++ LD_PRELOAD=
+++++++ __MODULES_QUARANTINE_SET=1
+++++++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash autoinit
+++++ eval '_module_raw() {
+   eval "$(/usr/bin/tclsh '\''/usr/share/Modules/libexec/modulecmd.tcl'\'' bash "$@")";
+   _mlstatus=$?;
+   return $_mlstatus;
+};
+module() {
+   local _mlredir=0;
+   if [ -n "${MODULES_REDIRECT_OUTPUT+x}" ]; then
+      if [ "$MODULES_REDIRECT_OUTPUT" = '\''0'\'' ]; then
+         _mlredir=0;
+      elif [ "$MODULES_REDIRECT_OUTPUT" = '\''1'\'' ]; then
+         _mlredir=1;
+      fi;
+   fi;
+   case " $@ " in
+      *'\'' --no-redirect '\''*) _mlredir=0 ;;
+      *'\'' --redirect '\''*) _mlredir=1 ;;
+   esac;
+   if [ $_mlredir -eq 0 ]; then
+      _module_raw "$@";
+   else
+      _module_raw "$@" 2>&1;
+   fi;
+};
+export -f _module_raw;
+export -f module;
+ml() { module ml "$@"; };
+export -f ml;
+MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl; export MODULES_CMD;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+MANPATH=/usr/share/man:; export MANPATH;
+unset __MODULES_AUTOINIT_INPROGRESS;
+MODULESHOME=/usr/share/Modules; export MODULESHOME;
+LOADEDMODULES=; export LOADEDMODULES;
+test 0;'
++++++ export -f _module_raw
++++++ export -f module
++++++ export -f ml
++++++ MODULES_CMD=/usr/share/Modules/libexec/modulecmd.tcl
++++++ export MODULES_CMD
++++++ __MODULES_SHARE_MANPATH=:1
++++++ export __MODULES_SHARE_MANPATH
++++++ MANPATH=/usr/share/man:
++++++ export MANPATH
++++++ unset __MODULES_AUTOINIT_INPROGRESS
++++++ MODULESHOME=/usr/share/Modules
++++++ export MODULESHOME
++++++ LOADEDMODULES=
++++++ export LOADEDMODULES
++++++ test 0
+++++ '[' -n x ']'
+++++ IFS=' 	
+'
+++++ unset _mlIFS
+++++ unset _mlre _mlv _mlrv
+++++ '[' -n '' ']'
+++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
+++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ export SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export PATH=.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ PATH=.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
++ export MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ MODULEPATH=/opt/apps/modulefiles:/opt/intel/modulefiles:/opt/pgi/modulefiles:/opt/gnu/modulefiles:/opt/sw/modulefiles
++ module load intel/2024 intel/ompi
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load intel/2024 intel/ompi
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load intel/2024 intel/ompi
++ eval 'CPATH=/opt/intel/24.0/ompi/include; export CPATH;
+LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+INTEL_PATH=/opt/intel/oneapi/2024.0/; export INTEL_PATH;
+MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:; export MANPATH;
+LOADEDMODULES=intel/2024:intel/ompi; export LOADEDMODULES;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi; export _LMFILES_;
+MPIF77=/opt/intel/24.0/ompi/bin/mpif77; export MPIF77;
+MPIRUN=/opt/intel/24.0/ompi/bin/mpirun; export MPIRUN;
+MPICC=/opt/intel/24.0/ompi/bin/mpicc; export MPICC;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024; export __MODULES_LMPREREQ;
+MKLROOT=/opt/intel/oneapi/mkl/2024.0/; export MKLROOT;
+__MODULES_SHARE_MANPATH=:1; export __MODULES_SHARE_MANPATH;
+INTEL_VERSION=2024.0; export INTEL_VERSION;
+MPICXX=/opt/intel/24.0/ompi/bin/mpicxx; export MPICXX;
+MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec; export MPIEXEC;
+PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+MPIF90=/opt/intel/24.0/ompi/bin/mpif90; export MPIF90;
+test 0;'
+++ CPATH=/opt/intel/24.0/ompi/include
+++ export CPATH
+++ LD_LIBRARY_PATH=/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ INTEL_PATH=/opt/intel/oneapi/2024.0/
+++ export INTEL_PATH
+++ MANPATH=/opt/intel/24.0/ompi/man:/usr/share/man:
+++ export MANPATH
+++ LOADEDMODULES=intel/2024:intel/ompi
+++ export LOADEDMODULES
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi
+++ export _LMFILES_
+++ MPIF77=/opt/intel/24.0/ompi/bin/mpif77
+++ export MPIF77
+++ MPIRUN=/opt/intel/24.0/ompi/bin/mpirun
+++ export MPIRUN
+++ MPICC=/opt/intel/24.0/ompi/bin/mpicc
+++ export MPICC
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024'
+++ export __MODULES_LMPREREQ
+++ MKLROOT=/opt/intel/oneapi/mkl/2024.0/
+++ export MKLROOT
+++ __MODULES_SHARE_MANPATH=:1
+++ export __MODULES_SHARE_MANPATH
+++ INTEL_VERSION=2024.0
+++ export INTEL_VERSION
+++ MPICXX=/opt/intel/24.0/ompi/bin/mpicxx
+++ export MPICXX
+++ MPIEXEC=/opt/intel/24.0/ompi/bin/mpiexec
+++ export MPIEXEC
+++ PATH=/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ MPIF90=/opt/intel/24.0/ompi/bin/mpif90
+++ export MPIF90
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/wann/3.1
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/wann/3.1
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/wann/3.1
++ eval 'LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib; export LD_LIBRARY_PATH;
+SCRATCH=.; export SCRATCH;
+SMPD_OPTION_NO_DYNAMIC_HOSTS=1; export SMPD_OPTION_NO_DYNAMIC_HOSTS;
+__MODULES_LMALTNAME=iompi/wann/3.1\&as\|iompi/wann/default\&as\|iompi/wann/latest; export __MODULES_LMALTNAME;
+WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/; export WANNIER90ROOT;
+OMP_NUM_THREADS=1; export OMP_NUM_THREADS;
+PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin; export PATH;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1; export LOADEDMODULES;
+test 0;'
+++ LD_LIBRARY_PATH=/opt/apps/ompi/wannier/v3.1//lib:/opt/intel/24.0/ompi/lib:/opt/intel/24.0/ompi/fftw-3.3.10-mpi/lib:/opt/intel/24.0/ompi/arpack/lib:/opt/intel/oneapi/2024.0//lib
+++ export LD_LIBRARY_PATH
+++ SCRATCH=.
+++ export SCRATCH
+++ SMPD_OPTION_NO_DYNAMIC_HOSTS=1
+++ export SMPD_OPTION_NO_DYNAMIC_HOSTS
+++ __MODULES_LMALTNAME='iompi/wann/3.1&as|iompi/wann/default&as|iompi/wann/latest'
+++ export __MODULES_LMALTNAME
+++ WANNIER90ROOT=/opt/apps/ompi/wannier/v3.1/
+++ export WANNIER90ROOT
+++ OMP_NUM_THREADS=1
+++ export OMP_NUM_THREADS
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin
+++ export PATH
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ module load iompi/qe/7.2
++ local _mlredir=0
++ '[' -n '' ']'
++ case " $@ " in
++ '[' 0 -eq 0 ']'
++ _module_raw load iompi/qe/7.2
+++ /usr/bin/tclsh /usr/share/Modules/libexec/modulecmd.tcl bash load iompi/qe/7.2
++ eval 'PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin; export PATH;
+__MODULES_LMPREREQ=intel/ompi\&intel/2024:iompi/qe/7.2\&intel/2024\&intel/ompi; export __MODULES_LMPREREQ;
+_LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2; export _LMFILES_;
+LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2; export LOADEDMODULES;
+test 0;'
+++ PATH=/opt/apps/ompi/wannier/v3.1//bin:/opt/intel/24.0/ompi/bin:/opt/intel/24.0/ompi/hdf5/bin:/opt/intel/oneapi/2024.0//bin:.:/tmp/123044.1.dko48m4:/opt/sge/bin:/opt/sge/bin/lx-amd64:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/bc889/.local/bin:/home/bc889/bin:/opt/apps/ompi/qe/7.2/bin
+++ export PATH
+++ __MODULES_LMPREREQ='intel/ompi&intel/2024:iompi/qe/7.2&intel/2024&intel/ompi'
+++ export __MODULES_LMPREREQ
+++ _LMFILES_=/opt/intel/modulefiles/intel/2024:/opt/intel/modulefiles/intel/ompi:/opt/apps/modulefiles/iompi/wann/3.1:/opt/apps/modulefiles/iompi/qe/7.2
+++ export _LMFILES_
+++ LOADEDMODULES=intel/2024:intel/ompi:iompi/wann/3.1:iompi/qe/7.2
+++ export LOADEDMODULES
+++ test 0
++ _mlstatus=0
++ return 0
++ tar -xzvf tmp.tar.gz
++ sh memory.sh
+sh: memory.sh: No such file or directory
+tmp/
+tmp/MnBi2Te4.hub28
+tmp/MnBi2Te4.hub12
+tmp/MnBi2Te4.xml
+tmp/MnBi2Te4.wfc21.gz
+tmp/MnBi2Te4.hub7
+tmp/MnBi2Te4.hub27
+tmp/MnBi2Te4.wfc32.gz
+tmp/MnBi2Te4.hub21
+tmp/MnBi2Te4.wfc27.gz
+tmp/MnBi2Te4.hub16
+tmp/MnBi2Te4.wfc9.gz
+tmp/MnBi2Te4.hub23
+tmp/MnBi2Te4.hub10
+tmp/MnBi2Te4.hub11
+tmp/MnBi2Te4.wfc4.gz
+tmp/MnBi2Te4.wfc31.gz
+tmp/MnBi2Te4.hub4
+tmp/MnBi2Te4.hub8
+tmp/MnBi2Te4.wfc23.gz
+tmp/MnBi2Te4.hub32
+tmp/MnBi2Te4.hub14
+tmp/MnBi2Te4.wfc28.gz
+tmp/MnBi2Te4.hub17
+tmp/MnBi2Te4.wfc24.gz
+tmp/MnBi2Te4.wfc18.gz
+tmp/MnBi2Te4.wfc26.gz
+tmp/MnBi2Te4.hub29
+tmp/MnBi2Te4.wfc29.gz
+tmp/MnBi2Te4.wfc25.gz
+tmp/MnBi2Te4.wfc1.gz
+tmp/MnBi2Te4.wfc10.gz
+tmp/MnBi2Te4.wfc12.gz
+tmp/MnBi2Te4.wfc15.gz
+tmp/MnBi2Te4.hub9
+tmp/MnBi2Te4.hub22
+tmp/MnBi2Te4.wfc7.gz
+tmp/MnBi2Te4.wfc19.gz
+tmp/MnBi2Te4.hub19
+tmp/MnBi2Te4.hub31
+tmp/MnBi2Te4.wfc14.gz
+tmp/MnBi2Te4.hub15
+tmp/MnBi2Te4.hub2
+tmp/MnBi2Te4.wfc5.gz
+tmp/MnBi2Te4.save/
+tmp/MnBi2Te4.save/wfcup172.dat
+tmp/MnBi2Te4.save/wfcup62.dat
+tmp/MnBi2Te4.save/wfcup32.dat
+tmp/MnBi2Te4.save/wfcup24.dat
+tmp/MnBi2Te4.save/wfcup114.dat
+tmp/MnBi2Te4.save/wfcup191.dat
+tmp/MnBi2Te4.save/wfcdw38.dat
+tmp/MnBi2Te4.save/wfcdw203.dat
+tmp/MnBi2Te4.save/wfcdw108.dat
+tmp/MnBi2Te4.save/wfcup82.dat
+tmp/MnBi2Te4.save/wfcdw43.dat
+tmp/MnBi2Te4.save/wfcup5.dat
+tmp/MnBi2Te4.save/wfcdw93.dat
+tmp/MnBi2Te4.save/wfcdw29.dat
+tmp/MnBi2Te4.save/wfcdw164.dat
+tmp/MnBi2Te4.save/wfcdw71.dat
+tmp/MnBi2Te4.save/wfcup181.dat
+tmp/MnBi2Te4.save/wfcup174.dat
+tmp/MnBi2Te4.save/wfcup203.dat
+tmp/MnBi2Te4.save/wfcup60.dat
+tmp/MnBi2Te4.save/wfcup193.dat
+tmp/MnBi2Te4.save/wfcup123.dat
+tmp/MnBi2Te4.save/wfcup178.dat
+tmp/MnBi2Te4.save/wfcup6.dat
+tmp/MnBi2Te4.save/wfcdw162.dat
+tmp/MnBi2Te4.save/wfcdw79.dat
+tmp/MnBi2Te4.save/wfcup117.dat
+tmp/MnBi2Te4.save/wfcup143.dat
+tmp/MnBi2Te4.save/wfcup81.dat
+tmp/MnBi2Te4.save/wfcdw86.dat
+tmp/MnBi2Te4.save/wfcdw18.dat
+tmp/MnBi2Te4.save/wfcup194.dat
+tmp/MnBi2Te4.save/wfcup97.dat
+tmp/MnBi2Te4.save/wfcup3.dat
+tmp/MnBi2Te4.save/wfcdw70.dat
+tmp/MnBi2Te4.save/wfcdw130.dat
+tmp/MnBi2Te4.save/wfcup92.dat
+tmp/MnBi2Te4.save/wfcup76.dat
+tmp/MnBi2Te4.save/wfcdw142.dat
+tmp/MnBi2Te4.save/wfcup84.dat
+tmp/MnBi2Te4.save/wfcdw120.dat
+tmp/MnBi2Te4.save/wfcdw147.dat
+tmp/MnBi2Te4.save/wfcup71.dat
+tmp/MnBi2Te4.save/wfcdw35.dat
+tmp/MnBi2Te4.save/wfcup102.dat
+tmp/MnBi2Te4.save/wfcdw15.dat
+tmp/MnBi2Te4.save/wfcdw116.dat
+tmp/MnBi2Te4.save/wfcup26.dat
+tmp/MnBi2Te4.save/wfcup136.dat
+tmp/MnBi2Te4.save/wfcdw131.dat
+tmp/MnBi2Te4.save/wfcup30.dat
+tmp/MnBi2Te4.save/wfcdw173.dat
+tmp/MnBi2Te4.save/wfcup201.dat
+tmp/MnBi2Te4.save/wfcdw40.dat
+tmp/MnBi2Te4.save/wfcup170.dat
+tmp/MnBi2Te4.save/wfcup186.dat
+tmp/MnBi2Te4.save/wfcup189.dat
+tmp/MnBi2Te4.save/wfcup148.dat
+tmp/MnBi2Te4.save/wfcup216.dat
+tmp/MnBi2Te4.save/wfcup64.dat
+tmp/MnBi2Te4.save/wfcdw65.dat
+tmp/MnBi2Te4.save/wfcup175.dat
+tmp/MnBi2Te4.save/wfcdw133.dat
+tmp/MnBi2Te4.save/wfcup42.dat
+tmp/MnBi2Te4.save/wfcup139.dat
+tmp/MnBi2Te4.save/wfcup101.dat
+tmp/MnBi2Te4.save/wfcup205.dat
+tmp/MnBi2Te4.save/wfcup134.dat
+tmp/MnBi2Te4.save/wfcup187.dat
+tmp/MnBi2Te4.save/wfcup14.dat
+tmp/MnBi2Te4.save/wfcdw102.dat
+tmp/MnBi2Te4.save/wfcdw80.dat
+tmp/MnBi2Te4.save/wfcdw8.dat
+tmp/MnBi2Te4.save/wfcdw215.dat
+tmp/MnBi2Te4.save/wfcup23.dat
+tmp/MnBi2Te4.save/wfcup12.dat
+tmp/MnBi2Te4.save/wfcdw163.dat
+tmp/MnBi2Te4.save/Te.pbe-n-kjpaw_psl.1.0.0.UPF
+tmp/MnBi2Te4.save/wfcdw74.dat
+tmp/MnBi2Te4.save/wfcdw149.dat
+tmp/MnBi2Te4.save/wfcup11.dat
+tmp/MnBi2Te4.save/wfcup67.dat
+tmp/MnBi2Te4.save/wfcdw136.dat
+tmp/MnBi2Te4.save/wfcdw41.dat
+tmp/MnBi2Te4.save/wfcdw10.dat
+tmp/MnBi2Te4.save/wfcup127.dat
+tmp/MnBi2Te4.save/wfcdw122.dat
+tmp/MnBi2Te4.save/wfcdw94.dat
+tmp/MnBi2Te4.save/wfcdw180.dat
+tmp/MnBi2Te4.save/wfcup108.dat
+tmp/MnBi2Te4.save/wfcdw216.dat
+tmp/MnBi2Te4.save/wfcdw208.dat
+tmp/MnBi2Te4.save/wfcup47.dat
+tmp/MnBi2Te4.save/wfcdw101.dat
+tmp/MnBi2Te4.save/wfcdw150.dat
+tmp/MnBi2Te4.save/Mn.pbe-spn-kjpaw_psl.0.3.1.UPF
+tmp/MnBi2Te4.save/wfcup206.dat
+tmp/MnBi2Te4.save/wfcup98.dat
+tmp/MnBi2Te4.save/wfcup149.dat
+tmp/MnBi2Te4.save/wfcup110.dat
+tmp/MnBi2Te4.save/wfcup99.dat
+tmp/MnBi2Te4.save/wfcdw12.dat
+tmp/MnBi2Te4.save/wfcup180.dat
+tmp/MnBi2Te4.save/wfcup93.dat
+tmp/MnBi2Te4.save/wfcup77.dat
+tmp/MnBi2Te4.save/wfcdw182.dat
+tmp/MnBi2Te4.save/wfcdw177.dat
+tmp/MnBi2Te4.save/wfcup27.dat
+tmp/MnBi2Te4.save/wfcdw210.dat
+tmp/MnBi2Te4.save/wfcup152.dat
+tmp/MnBi2Te4.save/wfcdw201.dat
+tmp/MnBi2Te4.save/wfcup204.dat
+tmp/MnBi2Te4.save/wfcup137.dat
+tmp/MnBi2Te4.save/wfcdw103.dat
+tmp/MnBi2Te4.save/wfcdw185.dat
+tmp/MnBi2Te4.save/wfcdw124.dat
+tmp/MnBi2Te4.save/wfcup90.dat
+tmp/MnBi2Te4.save/wfcdw166.dat
+tmp/MnBi2Te4.save/wfcdw172.dat
+tmp/MnBi2Te4.save/wfcup195.dat
+tmp/MnBi2Te4.save/wfcup212.dat
+tmp/MnBi2Te4.save/occup.txt
+tmp/MnBi2Te4.save/wfcup1.dat
+tmp/MnBi2Te4.save/wfcup80.dat
+tmp/MnBi2Te4.save/wfcdw143.dat
+tmp/MnBi2Te4.save/wfcup9.dat
+tmp/MnBi2Te4.save/wfcdw165.dat
+tmp/MnBi2Te4.save/wfcup164.dat
+tmp/MnBi2Te4.save/wfcdw114.dat
+tmp/MnBi2Te4.save/wfcdw76.dat
+tmp/MnBi2Te4.save/wfcdw205.dat
+tmp/MnBi2Te4.save/wfcup75.dat
+tmp/MnBi2Te4.save/wfcdw119.dat
+tmp/MnBi2Te4.save/wfcdw115.dat
+tmp/MnBi2Te4.save/wfcdw49.dat
+tmp/MnBi2Te4.save/wfcup70.dat
+tmp/MnBi2Te4.save/wfcup176.dat
+tmp/MnBi2Te4.save/wfcdw95.dat
+tmp/MnBi2Te4.save/wfcup22.dat
+tmp/MnBi2Te4.save/wfcdw20.dat
+tmp/MnBi2Te4.save/wfcup17.dat
+tmp/MnBi2Te4.save/wfcup209.dat
+tmp/MnBi2Te4.save/wfcdw32.dat
+tmp/MnBi2Te4.save/wfcup156.dat
+tmp/MnBi2Te4.save/wfcup33.dat
+tmp/MnBi2Te4.save/wfcdw100.dat
+tmp/MnBi2Te4.save/wfcdw16.dat
+tmp/MnBi2Te4.save/wfcup41.dat
+tmp/MnBi2Te4.save/wfcdw83.dat
+tmp/MnBi2Te4.save/wfcdw25.dat
+tmp/MnBi2Te4.save/wfcup36.dat
+tmp/MnBi2Te4.save/wfcdw96.dat
+tmp/MnBi2Te4.save/wfcup91.dat
+tmp/MnBi2Te4.save/wfcup138.dat
+tmp/MnBi2Te4.save/wfcdw77.dat
+tmp/MnBi2Te4.save/wfcdw128.dat
+tmp/MnBi2Te4.save/wfcup85.dat
+tmp/MnBi2Te4.save/wfcdw60.dat
+tmp/MnBi2Te4.save/wfcdw138.dat
+tmp/MnBi2Te4.save/wfcdw53.dat
+tmp/MnBi2Te4.save/wfcup73.dat
+tmp/MnBi2Te4.save/wfcup188.dat
+tmp/MnBi2Te4.save/wfcdw36.dat
+tmp/MnBi2Te4.save/wfcup161.dat
+tmp/MnBi2Te4.save/wfcup45.dat
+tmp/MnBi2Te4.save/wfcup154.dat
+tmp/MnBi2Te4.save/wfcup155.dat
+tmp/MnBi2Te4.save/wfcdw24.dat
+tmp/MnBi2Te4.save/wfcdw23.dat
+tmp/MnBi2Te4.save/wfcup153.dat
+tmp/MnBi2Te4.save/wfcup103.dat
+tmp/MnBi2Te4.save/wfcup46.dat
+tmp/MnBi2Te4.save/wfcdw91.dat
+tmp/MnBi2Te4.save/wfcup113.dat
+tmp/MnBi2Te4.save/wfcdw126.dat
+tmp/MnBi2Te4.save/wfcdw160.dat
+tmp/MnBi2Te4.save/wfcdw26.dat
+tmp/MnBi2Te4.save/wfcup146.dat
+tmp/MnBi2Te4.save/wfcup21.dat
+tmp/MnBi2Te4.save/wfcup144.dat
+tmp/MnBi2Te4.save/wfcup16.dat
+tmp/MnBi2Te4.save/wfcdw51.dat
+tmp/MnBi2Te4.save/wfcdw66.dat
+tmp/MnBi2Te4.save/wfcdw88.dat
+tmp/MnBi2Te4.save/wfcup95.dat
+tmp/MnBi2Te4.save/wfcdw209.dat
+tmp/MnBi2Te4.save/wfcup2.dat
+tmp/MnBi2Te4.save/wfcup35.dat
+tmp/MnBi2Te4.save/wfcdw104.dat
+tmp/MnBi2Te4.save/wfcdw2.dat
+tmp/MnBi2Te4.save/wfcdw170.dat
+tmp/MnBi2Te4.save/wfcdw140.dat
+tmp/MnBi2Te4.save/wfcup184.dat
+tmp/MnBi2Te4.save/wfcup121.dat
+tmp/MnBi2Te4.save/wfcdw187.dat
+tmp/MnBi2Te4.save/wfcdw181.dat
+tmp/MnBi2Te4.save/wfcdw186.dat
+tmp/MnBi2Te4.save/wfcup135.dat
+tmp/MnBi2Te4.save/wfcdw155.dat
+tmp/MnBi2Te4.save/wfcdw33.dat
+tmp/MnBi2Te4.save/wfcup43.dat
+tmp/MnBi2Te4.save/wfcdw109.dat
+tmp/MnBi2Te4.save/wfcup86.dat
+tmp/MnBi2Te4.save/wfcdw171.dat
+tmp/MnBi2Te4.save/wfcdw28.dat
+tmp/MnBi2Te4.save/wfcup211.dat
+tmp/MnBi2Te4.save/wfcdw17.dat
+tmp/MnBi2Te4.save/wfcdw47.dat
+tmp/MnBi2Te4.save/wfcup197.dat
+tmp/MnBi2Te4.save/wfcdw207.dat
+tmp/MnBi2Te4.save/wfcup160.dat
+tmp/MnBi2Te4.save/wfcup142.dat
+tmp/MnBi2Te4.save/wfcup133.dat
+tmp/MnBi2Te4.save/wfcdw158.dat
+tmp/MnBi2Te4.save/wfcup183.dat
+tmp/MnBi2Te4.save/wfcup63.dat
+tmp/MnBi2Te4.save/wfcup7.dat
+tmp/MnBi2Te4.save/wfcup207.dat
+tmp/MnBi2Te4.save/wfcdw54.dat
+tmp/MnBi2Te4.save/wfcdw30.dat
+tmp/MnBi2Te4.save/wfcup74.dat
+tmp/MnBi2Te4.save/wfcup159.dat
+tmp/MnBi2Te4.save/wfcdw63.dat
+tmp/MnBi2Te4.save/wfcup169.dat
+tmp/MnBi2Te4.save/wfcup157.dat
+tmp/MnBi2Te4.save/wfcdw214.dat
+tmp/MnBi2Te4.save/Bi.pbe-dn-kjpaw_psl.1.0.0.UPF
+tmp/MnBi2Te4.save/wfcdw125.dat
+tmp/MnBi2Te4.save/wfcdw56.dat
+tmp/MnBi2Te4.save/wfcdw27.dat
+tmp/MnBi2Te4.save/wfcdw161.dat
+tmp/MnBi2Te4.save/wfcdw113.dat
+tmp/MnBi2Te4.save/wfcup100.dat
+tmp/MnBi2Te4.save/wfcup198.dat
+tmp/MnBi2Te4.save/wfcup72.dat
+tmp/MnBi2Te4.save/wfcup128.dat
+tmp/MnBi2Te4.save/wfcdw46.dat
+tmp/MnBi2Te4.save/wfcdw153.dat
+tmp/MnBi2Te4.save/wfcup202.dat
+tmp/MnBi2Te4.save/wfcup40.dat
+tmp/MnBi2Te4.save/wfcup122.dat
+tmp/MnBi2Te4.save/wfcup25.dat
+tmp/MnBi2Te4.save/wfcdw3.dat
+tmp/MnBi2Te4.save/wfcdw197.dat
+tmp/MnBi2Te4.save/wfcup109.dat
+tmp/MnBi2Te4.save/wfcup163.dat
+tmp/MnBi2Te4.save/wfcup65.dat
+tmp/MnBi2Te4.save/wfcdw58.dat
+tmp/MnBi2Te4.save/wfcup111.dat
+tmp/MnBi2Te4.save/wfcdw168.dat
+tmp/MnBi2Te4.save/wfcdw22.dat
+tmp/MnBi2Te4.save/wfcdw176.dat
+tmp/MnBi2Te4.save/wfcdw196.dat
+tmp/MnBi2Te4.save/wfcdw89.dat
+tmp/MnBi2Te4.save/wfcup18.dat
+tmp/MnBi2Te4.save/wfcup104.dat
+tmp/MnBi2Te4.save/wfcdw190.dat
+tmp/MnBi2Te4.save/wfcdw132.dat
+tmp/MnBi2Te4.save/wfcdw135.dat
+tmp/MnBi2Te4.save/wfcdw7.dat
+tmp/MnBi2Te4.save/wfcdw82.dat
+tmp/MnBi2Te4.save/wfcdw151.dat
+tmp/MnBi2Te4.save/wfcdw98.dat
+tmp/MnBi2Te4.save/wfcup8.dat
+tmp/MnBi2Te4.save/wfcdw146.dat
+tmp/MnBi2Te4.save/wfcdw169.dat
+tmp/MnBi2Te4.save/wfcdw11.dat
+tmp/MnBi2Te4.save/wfcdw112.dat
+tmp/MnBi2Te4.save/wfcdw1.dat
+tmp/MnBi2Te4.save/wfcdw50.dat
+tmp/MnBi2Te4.save/wfcdw127.dat
+tmp/MnBi2Te4.save/wfcup50.dat
+tmp/MnBi2Te4.save/wfcup200.dat
+tmp/MnBi2Te4.save/wfcdw154.dat
+tmp/MnBi2Te4.save/wfcup87.dat
+tmp/MnBi2Te4.save/wfcdw55.dat
+tmp/MnBi2Te4.save/wfcdw121.dat
+tmp/MnBi2Te4.save/wfcdw52.dat
+tmp/MnBi2Te4.save/wfcdw184.dat
+tmp/MnBi2Te4.save/wfcdw144.dat
+tmp/MnBi2Te4.save/wfcdw44.dat
+tmp/MnBi2Te4.save/wfcup107.dat
+tmp/MnBi2Te4.save/wfcdw39.dat
+tmp/MnBi2Te4.save/wfcup52.dat
+tmp/MnBi2Te4.save/wfcup196.dat
+tmp/MnBi2Te4.save/wfcdw5.dat
+tmp/MnBi2Te4.save/wfcdw107.dat
+tmp/MnBi2Te4.save/wfcdw175.dat
+tmp/MnBi2Te4.save/wfcup28.dat
+tmp/MnBi2Te4.save/wfcup166.dat
+tmp/MnBi2Te4.save/wfcdw85.dat
+tmp/MnBi2Te4.save/wfcdw31.dat
+tmp/MnBi2Te4.save/wfcup39.dat
+tmp/MnBi2Te4.save/wfcup94.dat
+tmp/MnBi2Te4.save/wfcdw152.dat
+tmp/MnBi2Te4.save/wfcdw178.dat
+tmp/MnBi2Te4.save/wfcdw6.dat
+tmp/MnBi2Te4.save/data-file-schema.xml
+tmp/MnBi2Te4.save/wfcdw48.dat
+tmp/MnBi2Te4.save/wfcup13.dat
+tmp/MnBi2Te4.save/wfcdw137.dat
+tmp/MnBi2Te4.save/wfcup125.dat
+tmp/MnBi2Te4.save/wfcdw90.dat
+tmp/MnBi2Te4.save/wfcup20.dat
+tmp/MnBi2Te4.save/wfcup118.dat
+tmp/MnBi2Te4.save/wfcdw118.dat
+tmp/MnBi2Te4.save/wfcup150.dat
+tmp/MnBi2Te4.save/wfcdw57.dat
+tmp/MnBi2Te4.save/wfcdw9.dat
+tmp/MnBi2Te4.save/wfcdw34.dat
+tmp/MnBi2Te4.save/wfcdw204.dat
+tmp/MnBi2Te4.save/wfcdw156.dat
+tmp/MnBi2Te4.save/wfcup68.dat
+tmp/MnBi2Te4.save/wfcup210.dat
+tmp/MnBi2Te4.save/wfcdw68.dat
+tmp/MnBi2Te4.save/wfcup59.dat
+tmp/MnBi2Te4.save/wfcdw189.dat
+tmp/MnBi2Te4.save/wfcup88.dat
+tmp/MnBi2Te4.save/wfcup199.dat
+tmp/MnBi2Te4.save/wfcdw129.dat
+tmp/MnBi2Te4.save/wfcdw106.dat
+tmp/MnBi2Te4.save/wfcdw206.dat
+tmp/MnBi2Te4.save/wfcup115.dat
+tmp/MnBi2Te4.save/wfcup140.dat
+tmp/MnBi2Te4.save/wfcdw188.dat
+tmp/MnBi2Te4.save/wfcup165.dat
+tmp/MnBi2Te4.save/wfcup15.dat
+tmp/MnBi2Te4.save/wfcup130.dat
+tmp/MnBi2Te4.save/wfcdw4.dat
+tmp/MnBi2Te4.save/wfcup116.dat
+tmp/MnBi2Te4.save/wfcup106.dat
+tmp/MnBi2Te4.save/wfcup89.dat
+tmp/MnBi2Te4.save/wfcdw42.dat
+tmp/MnBi2Te4.save/wfcdw179.dat
+tmp/MnBi2Te4.save/wfcup120.dat
+tmp/MnBi2Te4.save/wfcdw213.dat
+tmp/MnBi2Te4.save/wfcup129.dat
+tmp/MnBi2Te4.save/wfcup141.dat
+tmp/MnBi2Te4.save/wfcup58.dat
+tmp/MnBi2Te4.save/wfcdw145.dat
+tmp/MnBi2Te4.save/wfcdw195.dat
+tmp/MnBi2Te4.save/wfcdw75.dat
+tmp/MnBi2Te4.save/wfcdw21.dat
+tmp/MnBi2Te4.save/wfcdw87.dat
+tmp/MnBi2Te4.save/wfcup214.dat
+tmp/MnBi2Te4.save/wfcup10.dat
+tmp/MnBi2Te4.save/wfcdw14.dat
+tmp/MnBi2Te4.save/wfcup54.dat
+tmp/MnBi2Te4.save/wfcup167.dat
+tmp/MnBi2Te4.save/wfcdw37.dat
+tmp/MnBi2Te4.save/wfcup69.dat
+tmp/MnBi2Te4.save/wfcup19.dat
+tmp/MnBi2Te4.save/wfcdw199.dat
+tmp/MnBi2Te4.save/wfcup192.dat
+tmp/MnBi2Te4.save/wfcdw193.dat
+tmp/MnBi2Te4.save/wfcup147.dat
+tmp/MnBi2Te4.save/wfcup105.dat
+tmp/MnBi2Te4.save/wfcdw13.dat
+tmp/MnBi2Te4.save/wfcup190.dat
+tmp/MnBi2Te4.save/wfcdw64.dat
+tmp/MnBi2Te4.save/wfcdw92.dat
+tmp/MnBi2Te4.save/wfcdw200.dat
+tmp/MnBi2Te4.save/wfcup124.dat
+tmp/MnBi2Te4.save/wfcup56.dat
+tmp/MnBi2Te4.save/paw.txt
+tmp/MnBi2Te4.save/wfcup119.dat
+tmp/MnBi2Te4.save/wfcdw202.dat
+tmp/MnBi2Te4.save/wfcdw212.dat
+tmp/MnBi2Te4.save/wfcdw84.dat
+tmp/MnBi2Te4.save/wfcdw141.dat
+tmp/MnBi2Te4.save/wfcup173.dat
+tmp/MnBi2Te4.save/wfcup145.dat
+tmp/MnBi2Te4.save/wfcup162.dat
+tmp/MnBi2Te4.save/wfcdw183.dat
+tmp/MnBi2Te4.save/wfcdw62.dat
+tmp/MnBi2Te4.save/wfcdw159.dat
+tmp/MnBi2Te4.save/wfcdw148.dat
+tmp/MnBi2Te4.save/wfcdw191.dat
+tmp/MnBi2Te4.save/wfcdw111.dat
+tmp/MnBi2Te4.save/wfcdw123.dat
+tmp/MnBi2Te4.save/wfcup112.dat
+tmp/MnBi2Te4.save/wfcdw194.dat
+tmp/MnBi2Te4.save/wfcdw78.dat
+tmp/MnBi2Te4.save/wfcdw69.dat
+tmp/MnBi2Te4.save/wfcdw61.dat
+tmp/MnBi2Te4.save/wfcup83.dat
+tmp/MnBi2Te4.save/wfcdw59.dat
+tmp/MnBi2Te4.save/wfcdw72.dat
+tmp/MnBi2Te4.save/wfcup185.dat
+tmp/MnBi2Te4.save/wfcup177.dat
+tmp/MnBi2Te4.save/wfcdw110.dat
+tmp/MnBi2Te4.save/wfcup48.dat
+tmp/MnBi2Te4.save/wfcup51.dat
+tmp/MnBi2Te4.save/wfcup57.dat
+tmp/MnBi2Te4.save/wfcup132.dat
+tmp/MnBi2Te4.save/wfcup4.dat
+tmp/MnBi2Te4.save/wfcup171.dat
+tmp/MnBi2Te4.save/wfcdw211.dat
+tmp/MnBi2Te4.save/wfcdw97.dat
+tmp/MnBi2Te4.save/wfcup151.dat
+tmp/MnBi2Te4.save/wfcdw81.dat
+tmp/MnBi2Te4.save/wfcdw45.dat
+tmp/MnBi2Te4.save/wfcdw117.dat
+tmp/MnBi2Te4.save/wfcup37.dat
+tmp/MnBi2Te4.save/wfcup78.dat
+tmp/MnBi2Te4.save/wfcdw134.dat
+tmp/MnBi2Te4.save/wfcup213.dat
+tmp/MnBi2Te4.save/wfcup38.dat
+tmp/MnBi2Te4.save/wfcup158.dat
+tmp/MnBi2Te4.save/wfcdw157.dat
+tmp/MnBi2Te4.save/wfcup208.dat
+tmp/MnBi2Te4.save/charge-density.dat
+tmp/MnBi2Te4.save/wfcup96.dat
+tmp/MnBi2Te4.save/wfcup44.dat
+tmp/MnBi2Te4.save/wfcdw19.dat
+tmp/MnBi2Te4.save/wfcdw167.dat
+tmp/MnBi2Te4.save/wfcdw99.dat
+tmp/MnBi2Te4.save/wfcup126.dat
+tmp/MnBi2Te4.save/wfcup66.dat
+tmp/MnBi2Te4.save/wfcdw174.dat
+tmp/MnBi2Te4.save/wfcup49.dat
+tmp/MnBi2Te4.save/wfcdw105.dat
+tmp/MnBi2Te4.save/wfcdw67.dat
+tmp/MnBi2Te4.save/wfcup168.dat
+tmp/MnBi2Te4.save/wfcup215.dat
+tmp/MnBi2Te4.save/wfcdw139.dat
+tmp/MnBi2Te4.save/wfcup34.dat
+tmp/MnBi2Te4.save/wfcup182.dat
+tmp/MnBi2Te4.save/wfcup179.dat
+tmp/MnBi2Te4.save/wfcup61.dat
+tmp/MnBi2Te4.save/wfcup29.dat
+tmp/MnBi2Te4.save/wfcdw192.dat
+tmp/MnBi2Te4.save/wfcup55.dat
+tmp/MnBi2Te4.save/wfcdw198.dat
+tmp/MnBi2Te4.save/wfcup31.dat
+tmp/MnBi2Te4.save/wfcup79.dat
+tmp/MnBi2Te4.save/wfcdw73.dat
+tmp/MnBi2Te4.save/wfcup131.dat
+tmp/MnBi2Te4.save/wfcup53.dat
+tmp/MnBi2Te4.hub5
+tmp/MnBi2Te4.hub6
+tmp/MnBi2Te4.hub13
+tmp/MnBi2Te4.hub24
+tmp/MnBi2Te4.wfc8.gz
+tmp/MnBi2Te4.hub18
+tmp/MnBi2Te4.hub30
+tmp/MnBi2Te4.hub20
+tmp/MnBi2Te4.wfc2.gz
+tmp/MnBi2Te4.wfc6.gz
+tmp/MnBi2Te4.hub1
+tmp/MnBi2Te4.wfc20.gz
+tmp/MnBi2Te4.wfc22.gz
+tmp/MnBi2Te4.wfc17.gz
+tmp/MnBi2Te4.wfc11.gz
+tmp/MnBi2Te4.hub26
+tmp/MnBi2Te4.wfc16.gz
+tmp/MnBi2Te4.wfc13.gz
+tmp/MnBi2Te4.hub3
+tmp/MnBi2Te4.hub25
+tmp/MnBi2Te4.wfc30.gz
+tmp/MnBi2Te4.wfc3.gz
++ for f in tmp/MnBi2Te4.save/wfc*.dat.gz
+++ echo 'tmp/MnBi2Te4.save/wfc*.dat.gz'
+++ sed -E 's/.*wfc([0-9]+)\.dat\.gz/\1/'
++ n='tmp/MnBi2Te4.save/wfc*.dat.gz'
++ gunzip -c 'tmp/MnBi2Te4.save/wfc*.dat.gz'
+/opt/sge/spool/n118/job_scripts/123044: line 40: tmp/MnBi2Te4.save/wfctmp/MnBi2Te4.save/wfc*.dat.gz.dat: No such file or directory
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc10.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=10
++ gunzip -c tmp/MnBi2Te4.wfc10.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc11.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=11
++ gunzip -c tmp/MnBi2Te4.wfc11.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc12.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=12
++ gunzip -c tmp/MnBi2Te4.wfc12.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc13.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=13
++ gunzip -c tmp/MnBi2Te4.wfc13.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc14.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=14
++ gunzip -c tmp/MnBi2Te4.wfc14.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc15.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=15
++ gunzip -c tmp/MnBi2Te4.wfc15.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc16.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=16
++ gunzip -c tmp/MnBi2Te4.wfc16.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc17.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=17
++ gunzip -c tmp/MnBi2Te4.wfc17.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc18.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=18
++ gunzip -c tmp/MnBi2Te4.wfc18.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc19.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=19
++ gunzip -c tmp/MnBi2Te4.wfc19.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc1.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=1
++ gunzip -c tmp/MnBi2Te4.wfc1.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc20.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=20
++ gunzip -c tmp/MnBi2Te4.wfc20.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc21.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=21
++ gunzip -c tmp/MnBi2Te4.wfc21.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc22.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=22
++ gunzip -c tmp/MnBi2Te4.wfc22.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc23.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=23
++ gunzip -c tmp/MnBi2Te4.wfc23.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc24.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=24
++ gunzip -c tmp/MnBi2Te4.wfc24.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc25.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=25
++ gunzip -c tmp/MnBi2Te4.wfc25.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc26.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=26
++ gunzip -c tmp/MnBi2Te4.wfc26.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc27.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=27
++ gunzip -c tmp/MnBi2Te4.wfc27.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc28.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=28
++ gunzip -c tmp/MnBi2Te4.wfc28.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc29.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=29
++ gunzip -c tmp/MnBi2Te4.wfc29.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc2.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=2
++ gunzip -c tmp/MnBi2Te4.wfc2.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc30.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=30
++ gunzip -c tmp/MnBi2Te4.wfc30.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc31.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=31
++ gunzip -c tmp/MnBi2Te4.wfc31.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc32.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=32
++ gunzip -c tmp/MnBi2Te4.wfc32.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc3.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=3
++ gunzip -c tmp/MnBi2Te4.wfc3.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc4.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=4
++ gunzip -c tmp/MnBi2Te4.wfc4.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc5.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=5
++ gunzip -c tmp/MnBi2Te4.wfc5.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc6.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=6
++ gunzip -c tmp/MnBi2Te4.wfc6.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc7.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=7
++ gunzip -c tmp/MnBi2Te4.wfc7.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc8.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=8
++ gunzip -c tmp/MnBi2Te4.wfc8.gz
++ for f in tmp/MnBi2Te4.wfc*.gz
+++ echo tmp/MnBi2Te4.wfc9.gz
+++ sed -E 's/.*wfc([0-9]+)\.gz/\1/'
++ n=9
++ gunzip -c tmp/MnBi2Te4.wfc9.gz
++ mpirun -n 32 taskset -c 0-31 bands.x -input bands.in
++ mpirun -n 1 projwfc.x -input projwfc_template.in
++ ps axu
++ grep memory.sh
++ awk '{print $2}'
++ xargs kill -9
+kill: sending signal to 262204 failed: No such process
++ rm -r 'UNK00*'
+rm: cannot remove 'UNK00*': No such file or directory
+Your job finished at Tue Sep 16 09:05:55 PM EDT 2025
