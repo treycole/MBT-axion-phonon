@@ -1,0 +1,75 @@
+&control
+  calculation = 'scf'
+  prefix      = 'MnBi2Te4'
+  outdir      = './tmp/'
+  verbosity   = 'high'
+  pseudo_dir  = './'
+  restart_mode = 'restart'
+  tprnfor = .true.
+/
+&system
+  ibrav    = 0
+  nat      = 14,                 ! Te-Bi-Te-Mn-Te-Bi-Te
+  ntyp     = 4,                  ! Mn1, Mn2, Bi, Te
+  ecutwfc  = 60.0,               ! plane-wave cutoff (Ry)—tune as needed
+  ecutrho =  500.0,
+  nosym = .false.
+  starting_magnetization(1) = 0.333,  ! Mn1
+  starting_magnetization(2) = 0.333,  ! Mn2
+  angle1(1) = 0.0   !Specifies angle of spin with respect to z-axis
+  angle1(2) = 180.0 ! Mn2 has opposite spin, i.e., angle1 = 180 degrees
+  angle2(1) = 0.0   ! Specifies the azimuthal angle (in the plane perpendicular to z). It is irrelevant in this case
+  angle2(2) = 0.0
+  occupations = 'smearing'
+  smearing    = 'm-v'
+  degauss     = 0.01
+  noncolin    =  .true.
+  lspinorb    =  .true.
+  report = 1
+  vdw_corr = 'dft-d3'
+/
+&electrons
+  conv_thr = 1.0d-6
+  electron_maxstep = 200
+  diago_full_acc = .true.
+  diagonalization='david'
+  mixing_beta = 0.2
+  mixing_mode = 'local-TF'
+  mixing_ndim = 4
+  startingpot = 'file'
+  startingwfc = 'file'
+/
+
+CELL_PARAMETERS bohr
+  4.09467514  -2.36407495  51.55930445
+  0.00000000   4.72809812  51.55930445
+  -4.09467514 -2.36407495  51.55930445
+
+ATOMIC_SPECIES
+ Mn1  54.9380  Mn.rel-pbe-spn-kjpaw_psl.0.3.1.UPF
+ Mn2  54.9380  Mn.rel-pbe-spn-kjpaw_psl.0.3.1.UPF
+ Bi 208.9800  Bi.rel-pbe-dn-kjpaw_psl.1.0.0.UPF
+ Te 127.6030  Te.rel-pbe-n-kjpaw_psl.1.0.0.UPF
+
+!HUBBARD (ortho-atomic)
+!U Mn1-3d 4.0
+!U Mn2-3d 4.0
+
+ATOMIC_POSITIONS angstrom
+ Mn1 0.000000000000 0.000000000000 0.000000000000
+ Mn2 0.000000000000 0.000000000000 40.926002980857
+ Bi  0.000000000000 0.000000000000 17.389457591176
+ Bi  0.000000000000 0.000000000000 58.315460572032
+ Bi  0.000000000000 0.000000000000 23.536542649833
+ Bi  0.000000000000 0.000000000000 64.462545630690
+ Te  0.000000000000 0.000000000000 5.457892683596
+ Te  0.000000000000 0.000000000000 46.383892924604
+ Te  0.000000000000 0.000000000000 35.468110297261
+ Te  0.000000000000 0.000000000000 76.394113278118
+ Te  0.000000000000 0.000000000000 12.044701013289
+ Te  0.000000000000 0.000000000000 52.950701254297
+ Te  0.000000000000 0.000000000000 28.881301967568
+ Te  0.000000000000 0.000000000000 69.827302208577
+
+K_POINTS automatic
+  4 4 4 0 0 0
