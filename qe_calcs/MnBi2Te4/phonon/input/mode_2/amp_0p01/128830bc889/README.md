@@ -1,1 +1,0 @@
-amplitude is 0.01
